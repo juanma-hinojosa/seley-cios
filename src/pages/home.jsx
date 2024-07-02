@@ -1,3 +1,5 @@
+import CardComponent from "../componets/CardComponent";
+
 function HomePage() {
     return(
         <>
@@ -6,6 +8,11 @@ function HomePage() {
 
             <section>
                 {/* Aca adentro creas tu parte de CUIDEMOS LOS DIENTES */}
+
+                <CardComponent/>
+                <h1>
+                    Esta parte la tengo que hacer yo
+                </h1>
             </section>
 
 
