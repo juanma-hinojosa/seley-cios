@@ -1,5 +1,22 @@
-/* servicios clinicos comienzo */
-.services-clinics-contain {
-    
+/* cuidados comienzo */
+.cuidados-contain {
+  /* display: flex;
+    justify-content: space-between;
+     */
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
 }
-/* servicios clinicos fin */
+
+.cuidados-contain > figcaption {
+  /* width: 100%; */
+  height: 550px;
+  display: flex;
+  justify-content: center;
+}
+
+.cuidados-contain > figcaption > video {
+  height: 100%;
+}
+/* cuidados fin */
