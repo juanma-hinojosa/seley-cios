@@ -6,6 +6,7 @@ function HomePage() {
 
             <section>
                 {/* Aca adentro creas tu parte de CUIDEMOS LOS DIENTES */}
+
             </section>
 
 
