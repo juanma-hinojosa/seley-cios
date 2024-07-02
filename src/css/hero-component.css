@@ -1,0 +1,6 @@
+.hero-content {
+    background-image: url(/src/images/hero-section-home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}

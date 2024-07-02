@@ -1,0 +1,38 @@
+.header-component-container {
+padding: 0 50px;
+}
+
+.header-component-container > article {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 100px;
+}
+
+.header-component-container > article > div > h2 {
+    text-transform: capitalize;
+    font-size: 70px;
+}
+
+.header-component-container > article > div > .subtitle-container {
+    width: 200px;
+    border-bottom: 3px solid var(--violet);
+}
+
+.header-component-container > article > div >.subtitle-container> h3 {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.header-component-container > article > div >.subtitle-container> h3 > i {
+    font-size: 10px;
+    margin-right: 5px;
+    color: var(--violet);
+}
+
+.header-component-container > article > div > p {
+    margin-top: 10px;
+    line-height: 18px;
+    font-size: 15px;
+} 
