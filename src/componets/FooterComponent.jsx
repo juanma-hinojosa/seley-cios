@@ -1,4 +1,3 @@
-import ''
 import '../css/footer-component.css'
 import { BsTwitter } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
