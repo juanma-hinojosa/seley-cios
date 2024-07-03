@@ -6,7 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 
 function FooterComponent() {
     return(
-        <footer className="footer-wrapper">
+        <footer className="footer-wrapper poppins-regular">
             <div className="footer-section-one">
                 <div className="footer-logo-container">
 
