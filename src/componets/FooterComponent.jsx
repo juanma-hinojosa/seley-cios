@@ -9,7 +9,7 @@ function FooterComponent() {
         <footer className="footer-wrapper">
             <div className="footer-section-one">
                 <div className="footer-logo-container">
-
+                    <h1>LOGO</h1>
                     <img src="" alt="" />
 
                 </div>
