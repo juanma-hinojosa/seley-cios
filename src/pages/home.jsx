@@ -1,4 +1,5 @@
 import CardComponent from "../componets/CardComponent";
+import CardReviewComponent from "../componets/CardReviewComponent";
 import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
@@ -62,6 +63,38 @@ function HomePage() {
       icon: "fa-solid fa-user-doctor",
     },
   ];
+  const reviewList = [
+    {
+      id: 0,
+      name: "Aylen Galarza",
+      p: "Excelente atención, un amor de profesionales y reinas de la confianza hacia los niños!!",
+    },
+    {
+      id: 1,
+      name: "Agostina FG",
+      p: "Excelente atención de la dra. Seley. Impecable el consultorio. Turnos rápidos. Súper recomendable. Quiero agregar que también he sido atendida por la dra. Andrea, quien ha sido súper amorosa en su atención y me ha explicado con lujo de detalles todo lo que necesité saber. Además se ha tomado la molestia de consultar mi caso con una colega y luego comunicarse telefónicamente conmigo para darme todas las opciones a seguir, por lo cual estoy inmensamente agradecida!",
+    },
+    {
+      id: 2,
+      name: "Samanta Ortega",
+      p: "Las instalaciones son muy cómodas y limpias, además esta muy bien equipado. Me atendí con la Dra. Claudia y mi experiencia fue muy muy buena, excelente profesional, muy cuidadosa y dedicada, es difícil encontrar odontólogos con ese nivel de profesionalismo y empatía.",
+    },
+    {
+      id: 3,
+      name: "Sofia Moreno",
+      p: "Excelente atención, un amor de profesionales y reinas de la confianza hacia los niños!!",
+    },
+    {
+      id: 4,
+      name: "Ivanna Coronel",
+      p: "Excelente atención, un amor de profesionales y reinas de la confianza hacia los niños!!",
+    },
+    {
+      id: 5,
+      name: "Marina Postare",
+      p: "Excelente atención, un amor de profesionales y reinas de la confianza hacia los niños!!",
+    },
+  ];
   return (
     <>
       <HeroComponent
@@ -78,12 +111,14 @@ function HomePage() {
           p="Para mantener tu salud bucal proveemos un rango amplio de tratamientos para nuestros pacientes"
         />
 
-        <article>
+        <article className="services-cards-container">
           {servicesClinics.map((service) => (
-            <div key={service.id}>
-              <h1>
-                <i className="fa-solid fa-tooth"></i> {service.title}
-              </h1>
+            <div className="service-card poppins-regular" key={service.id}>
+              <div>
+                <i className="fa-solid fa-tooth"></i>
+                <h1>{service.title}</h1>
+              </div>
+
               <p>{service.p}</p>
             </div>
           ))}
@@ -99,13 +134,13 @@ function HomePage() {
       </section>
 
       {/* NUESTRAS CLINICAS */}
-      <section>
+      <section className="clinics-container">
         <HeaderTitleComponent
           h2="disfruta de la experiencia en nuestras clinicas"
           h3="nuestras clinicas"
           p="Contamos con un agradable lugar y sala de espera con Television, Wi-Fi, Aire Acondicionado, Calefaccion y mas"
         />
-        <article>
+        <article className="clinics-card-container poppins-regular">
           {infoClinics.map((info) => (
             <figure key={info.id}>
               <div>
@@ -140,16 +175,23 @@ function HomePage() {
 
       {/* REVIEWS */}
       <section>
-        <HeaderTitleComponent 
-        h2='nuestra atencion en los ojos de los pacientes'
-        h3='Comentarios'
-        p='Opniones con sinceridad de los pacientes que pasan por nuestro consultorio'
+        <HeaderTitleComponent
+          h2="nuestra atencion en los ojos de los pacientes"
+          h3="Comentarios"
+          p="Opniones con sinceridad de los pacientes que pasan por nuestro consultorio"
         />
+
+        <div className="reviews-container">
+          {reviewList.map((review) => (
+            <CardReviewComponent
+              key={review.id}
+              name={review.name}
+              p={review.p}
+            />
+          ))}
+        </div>
       </section>
       {/* FIN REVIEWS */}
-
-
-
 
       {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
