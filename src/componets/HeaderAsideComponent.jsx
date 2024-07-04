@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import "../css/header-aside-component.css";
+import ButtonArrowComponent from "./ButtonArrow";
 import ButtonComponent from "./ButtonComponent";
 function HeaderAsideComponent(props) {
   return (
@@ -14,13 +15,10 @@ function HeaderAsideComponent(props) {
         <h2 className="poppins-semibold">{props.h2}</h2>
       </header>
       <p className="poppins-semibold">{props.p}</p>
-      <section
-style={{display:'flex'}}
->
+      <div style={{marginTop:'20px'}}>
         <ButtonComponent nameLink="Ver Reels" />
-
-        <ButtonComponent nameLink="Ver Reels" />
-      </section>
+        <ButtonArrowComponent nameLink="Whats App" />
+      </div>
     </article>
   );
 }

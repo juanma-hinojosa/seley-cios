@@ -1,0 +1,12 @@
+.button-arrow {
+  padding: 10px 50px;
+  color: var(--violet);
+  text-decoration: none;
+  transition: .2s;
+  display: flex;
+  align-items: center;
+}
+
+.button-arrow>i:hover {
+    margin-left: 20px;
+}
