@@ -7,7 +7,7 @@ function HeaderTitleComponent(props) {
         <div>
           <h2>{props.h2}</h2>
         </div>
-        <div>
+        <div> 
           <div className="subtitle-container">
             <h3 className="poppins-semibold">
               <i className="fa-solid fa-circle"></i>

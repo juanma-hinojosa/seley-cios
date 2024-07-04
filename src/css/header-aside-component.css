@@ -1,31 +1,35 @@
 .header-aside-container {
-/* width: 60%; */
+  width: 100%;
+}
+.header-aside-container > header {
+  width: 100%;
+}
+.header-aside-container > header > div {
+  width: 230px;
+  border-bottom: 3px solid var(--violet);
 }
 
-.header-aside-container>header>div {
-width: 230px;
-border-bottom: 3px solid var(--violet);
+.header-aside-container > header > div > h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
 }
 
-.header-aside-container>header>div>h3{
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    text-transform: capitalize;
+.header-aside-container > header > div > h3 > i {
+  font-size: 10px;
+  margin-right: 5px;
+  color: var(--violet);
 }
 
-.header-aside-container>header>div>h3>i{
-    font-size: 10px;
-    margin-right: 5px;
-    color: var(--violet);
+.header-aside-container > header > h2 {
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 80px;
 }
 
-.header-aside-container>header>h2 {
-    font-size: 70px;
-    text-transform: capitalize;
-    line-height: 80px;
-}
-
-.header-aside-container>p {
-    width: 50%;
+.header-aside-container > p {
+  width: 80%;
+  font-size: 1rem;
 }

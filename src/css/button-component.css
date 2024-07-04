@@ -1,0 +1,9 @@
+.button-container {
+  padding: 10px 50px;
+  border: 2px solid var(--violet);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

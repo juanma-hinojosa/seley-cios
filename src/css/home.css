@@ -27,10 +27,6 @@
   margin-right: 30px;
 }
 
-/* .services-cards-container > .service-card > div > h1{
-
-} */
-
 .services-cards-container > .service-card > p {
   color: #5d5959;
 }
@@ -86,24 +82,41 @@
 
 /* cuidados comienzo */
 .cuidados-contain {
-  /* display: flex;
-    justify-content: space-between;
-     */
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 800px) {
+  .cuidados-contain {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cuidados-contain {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* .cuidados-contain {
+  
   padding: 50px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: start;
-}
+} */
 
 .cuidados-contain > figcaption {
-  /* width: 100%; */
-  height: 550px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .cuidados-contain > figcaption > video {
-  height: 100%;
+  width: 100%;
 }
 /* cuidados fin */
 

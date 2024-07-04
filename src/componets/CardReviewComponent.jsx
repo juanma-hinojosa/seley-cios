@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import '../css/card-review-component.css'
+import "../css/card-review-component.css";
+
 function CardReviewComponent(props) {
   return (
     <figure className='poppins-regular review-container' key={props.id} >

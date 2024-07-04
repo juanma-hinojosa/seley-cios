@@ -4,6 +4,8 @@ import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
 
+
+
 function HomePage() {
   const servicesClinics = [
     {
@@ -159,7 +161,7 @@ function HomePage() {
         <figcaption>
           <video
             // src='src/assets/images/about-vid.mp4'
-            src={`src/videos/video-1.mp4`}
+            src={`src/videos/procedimientos.mp4`}
             loop
             muted
             autoPlay

@@ -1,4 +1,24 @@
-.header-component-container {
+.header-component-container > article {
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 600px) {
+  .header-component-container > article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .header-component-container > article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* .header-component-container {
 padding: 0 50px;
 }
 
@@ -6,34 +26,34 @@ padding: 0 50px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 100px;
-}
+} */
 
 .header-component-container > article > div > h2 {
-    text-transform: capitalize;
-    font-size: 70px;
-    line-height: 80px;
+  text-transform: capitalize;
+  font-size: 70px;
+  line-height: 80px;
 }
 
 .header-component-container > article > div > .subtitle-container {
-    width: 200px;
-    border-bottom: 3px solid var(--violet);
+  width: 200px;
+  border-bottom: 3px solid var(--violet);
 }
 
-.header-component-container > article > div >.subtitle-container> h3 {
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
+.header-component-container > article > div > .subtitle-container > h3 {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
 }
 
-.header-component-container > article > div >.subtitle-container> h3 > i {
-    font-size: 10px;
-    margin-right: 5px;
-    color: var(--violet);
+.header-component-container > article > div > .subtitle-container > h3 > i {
+  font-size: 10px;
+  margin-right: 5px;
+  color: var(--violet);
 }
 
 .header-component-container > article > div > p {
-    margin-top: 10px;
-    line-height: 18px;
-    font-size: 15px;
-} 
+  margin-top: 10px;
+  line-height: 18px;
+  font-size: 15px;
+}

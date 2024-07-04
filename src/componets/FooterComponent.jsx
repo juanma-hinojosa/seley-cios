@@ -3,8 +3,8 @@ import '../css/footer-component.css'
 function FooterComponent() {
     return(
         <footer className="pie-pagina">
-            <div class="grupo-1">
-                <div class="box">
+            <div className="grupo-1">
+                <div className="box">
                     <figure>
                         <a href="#">
                             <h1>LOGO</h1>
@@ -12,19 +12,19 @@ function FooterComponent() {
                         </a>
                     </figure>
                 </div>
-                <div class="box">
+                <div className="box">
                     <p>1138393736</p>
                     <p>hello@dental.com</p>
                     <p>press@dental.com</p>
                     <p>contact@dental.com</p>
                 </div>
-                <div class="box">
+                <div className="box">
                     <h2>SIGUENOS</h2>
-                    <div class="red-social">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-youtube"></a>
+                    <div className="red-social">
+                        <a href="#" className="fa fa-facebook"></a>
+                        <a href="#" className="fa fa-instagram"></a>
+                        <a href="#" className="fa fa-twitter"></a>
+                        <a href="#" className="fa fa-youtube"></a>
                     </div>
                 </div>
             </div>            
