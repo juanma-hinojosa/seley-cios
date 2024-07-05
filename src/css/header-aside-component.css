@@ -33,3 +33,36 @@
   width: 80%;
   font-size: 1rem;
 }
+
+@media (max-width: 1050px) {
+  .header-aside-container > header > h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-aside-container > header > h2 {
+    font-size: 2.3rem;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+  .header-aside-container > p {
+    width: 100%;
+  }
+
+  .header-aside-container > header > div {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .header-aside-container > header > h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-aside-container > header > h2 {
+    font-size: 2.3rem;
+  }
+}

@@ -45,6 +45,9 @@
 /* FIN SERVICES  */
 
 /* clinicas */
+.clinics-container > .clinics-card-container {
+  padding: 20px;
+}
 .clinics-container > .clinics-card-container > figure > div {
   width: 60px;
   height: 60px;
@@ -64,7 +67,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 @media (min-width: 600px) {
@@ -89,30 +92,24 @@
   gap: 3rem;
 }
 
-@media (min-width: 800px) {
+@media (max-width: 900px) {
   .cuidados-contain {
     grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
 @media (min-width: 900px) {
   .cuidados-contain {
     grid-template-columns: repeat(2, 1fr);
+    
   }
 }
 
-/* .cuidados-contain {
-  
-  padding: 50px;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  align-items: start;
-} */
 
 .cuidados-contain > figcaption {
   width: 100%;
-  /* display: flex;
-  justify-content: center; */
 }
 
 .cuidados-contain > figcaption > video {

@@ -3,6 +3,7 @@ import CardReviewComponent from "../componets/CardReviewComponent";
 import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
+import WhatsAppComponent from "../componets/WhatsAppComponent";
 
 
 
@@ -194,7 +195,7 @@ function HomePage() {
         </div>
       </section>
       {/* FIN REVIEWS */}
-
+<WhatsAppComponent />
       {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
   );

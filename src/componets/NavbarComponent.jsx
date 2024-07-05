@@ -21,22 +21,26 @@ function NavbarComponent() {
 
   return (
     <header className="header-container poppins-regular">
-      <img className="logo" src={logo} alt="logo seley odontologia cios" />
-      <div onClick={openMenu} className="abrir-menu" id="abrir-menu">
-        <i className="fa-solid fa-bars"></i>
-      </div>
-      <nav className="nav-container" id="nav-container">
-        <div onClick={closeMenu} id="cerrar-menu" className="cerrar-menu">
-          <i className="fa-solid fa-xmark"></i>
+      <section>
+        <img className="logo" src={logo} alt="logo seley odontologia cios" />
+        <div onClick={openMenu} className="abrir-menu" id="abrir-menu">
+          <i className="fa-solid fa-bars"></i>
         </div>
-        <ul className="nav-list">
-          {navLinks.map((link) => (
-            <li key={link.id}>
-              <Link to={link.path}>{link.name}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+        <nav className="nav-container" id="nav-container">
+          <div onClick={closeMenu} id="cerrar-menu" className="cerrar-menu">
+            <i className="fa-solid fa-xmark"></i>
+          </div>
+          <ul className="nav-list">
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <Link onClick={closeMenu} to={link.path}>
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </section>
     </header>
   );
 }

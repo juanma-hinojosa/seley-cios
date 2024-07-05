@@ -1,0 +1,19 @@
+.whats-app-container {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 40px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whats-app-container a {
+  text-decoration: none;
+  color: #dcf8c6;
+}
