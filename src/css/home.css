@@ -6,31 +6,6 @@
   gap: 2rem;
 }
 
-.services-cards-container > .service-card {
-  padding: 30px;
-  border-radius: 10px;
-  transition: ease .3s;
-}
-
-.services-cards-container > .service-card:hover{
-  box-shadow: -1px 10px 33px 4px rgba(0,0,0,0.28);
-}
-
-.services-cards-container > .service-card > div {
-  display: flex;
-  align-items: center;
-}
-
-.services-cards-container > .service-card > div > i {
-  font-size: 2rem;
-  color: var(--violet);
-  margin-right: 30px;
-}
-
-.services-cards-container > .service-card > p {
-  color: #5d5959;
-}
-
 @media (min-width: 600px) {
   .services-cards-container {
     grid-template-columns: repeat(2, 1fr);

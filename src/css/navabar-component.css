@@ -1,6 +1,6 @@
 .header-container {
   background-color: var(--violet);
-position: fixed;
+/* position: fixed; */
 width: 100%;
 }
 .header-container section {
@@ -68,6 +68,7 @@ width: 100%;
     background-color: var(--violet);
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    z-index: 999999999;
   }
 
   .nav-container.visible {
@@ -78,6 +79,6 @@ width: 100%;
   .nav-list {
     flex-direction: column;
     align-items: end;
-    height: 100vh;
+    /* height: 100vh; */
   }
 }

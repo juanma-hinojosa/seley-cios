@@ -1,43 +1,57 @@
-import CardComponent from "../componets/CardComponent";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+
 import CardReviewComponent from "../componets/CardReviewComponent";
+import CardServicesComponent from "../componets/CardServicesComponent";
 import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
 import WhatsAppComponent from "../componets/WhatsAppComponent";
-
-
 
 function HomePage() {
   const servicesClinics = [
     {
       id: 0,
       title: "Caries",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "Procedimiento en el que la pieza dental es recuperada evitando asi un problema mayor para el paciente en el futuro",
+      img: "services-1.jpg",
     },
     {
       id: 1,
       title: "Endodoncia",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "Quitamos el dolor del nervio por medio de este procedimeinto evitando asi una extraccion de la pieza",
+      img: "services-2.jpg",
     },
     {
       id: 2,
       title: "Ortodoncia",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "Logramos obtener una sonrisa linda y asi el paciente despues del tratamiento esta listo para sonrreir",
+      img: "services-3.jpg",
     },
     {
       id: 3,
       title: "Blanqueamineto",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "Procedimeinto estetico que embellece la sonrisa del paciente",
+      img: "services-4.jpg",
     },
     {
       id: 4,
       title: "Implantes",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "El implante cumple la funcion de remplazar piezas faltantes y asi lograr subir la confianza y autoestima del paciente",
+      img: "services-5.jpg",
     },
     {
       id: 5,
       title: "Extracciones",
-      p: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, dolor. Ipsa qui nostrum voluptatibus dolores!",
+      p: "Este procedimeinto es el ultimo recurso para casos de muelas de jucios y casos irrecuperables de piezas dentales fracturadas",
+      img: "services-6.jpg",
     },
   ];
   const infoClinics = [
@@ -100,11 +114,44 @@ function HomePage() {
   ];
   return (
     <>
-      <HeroComponent
-        h1="Seley C.I.O.S"
-        h2="Checkea Tu Salud Dental Hoy"
-        p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
-      />
+      <Swiper
+        effect={"fade"}
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        modules={[Autoplay, EffectFade, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <HeroComponent
+            h1="Seley C.I.O.S"
+            h2="Checkea Tu Salud Dental Hoy"
+            p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HeroComponent
+            h1="Seley C.I.O.S"
+            h2="Checkea Tu Salud Dental MAÑANA"
+            p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <HeroComponent
+            h1="Seley C.I.O.S"
+            h2="Checkea Tu Salud Dental ayer"
+            p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
+          />
+        </SwiperSlide>
+      </Swiper>
 
       {/* Servicios clinicos */}
       <section className="services-clinics-contain">
@@ -116,14 +163,12 @@ function HomePage() {
 
         <article className="services-cards-container">
           {servicesClinics.map((service) => (
-            <div className="service-card poppins-regular" key={service.id}>
-              <div>
-                <i className="fa-solid fa-tooth"></i>
-                <h1>{service.title}</h1>
-              </div>
-
-              <p>{service.p}</p>
-            </div>
+            <CardServicesComponent
+              h1={service.title}
+              key={service.id}
+              img={service.img}
+              p={service.p}
+            />
           ))}
         </article>
       </section>
@@ -132,7 +177,6 @@ function HomePage() {
       <section>
         {/* Aca adentro creas tu parte de CUIDEMOS LOS DIENTES */}
 
-        <CardComponent />
         <h1>Esta parte la tengo que hacer yo</h1>
       </section>
 
@@ -195,7 +239,7 @@ function HomePage() {
         </div>
       </section>
       {/* FIN REVIEWS */}
-<WhatsAppComponent />
+      <WhatsAppComponent />
       {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
   );
