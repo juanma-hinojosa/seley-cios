@@ -15,6 +15,7 @@ import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
 import WhatsAppComponent from "../componets/WhatsAppComponent";
 import LocationMaps from "../componets/LocationMaps";
+import CuidemosComponent from "../componets/SectionCuidemosComponent";
 
 function HomePage() {
   const servicesClinics = [
@@ -178,7 +179,7 @@ function HomePage() {
       <section>
         {/* Aca adentro creas tu parte de CUIDEMOS LOS DIENTES */}
 
-        <h1>Esta parte la tengo que hacer yo</h1>
+        <CuidemosComponent />
       </section>
 
       {/* NUESTRAS CLINICAS */}
