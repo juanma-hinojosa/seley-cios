@@ -4,6 +4,7 @@ import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
 import WhatsAppComponent from "../componets/WhatsAppComponent";
+import LocationMaps from "../componets/LocationMaps";
 
 
 
@@ -195,6 +196,18 @@ function HomePage() {
         </div>
       </section>
       {/* FIN REVIEWS */}
+
+      {/* LOCATION-MAPS */}
+      <section className="cuidados-contain">
+      <LocationMaps
+          h3="Contactanos"
+          p="Dirección: Av. Siempreviva 123
+          Tel: 124587635321
+          Horarios de atención: Lun - Vie  10hs - 18hs"
+          
+        />
+      </section>
+      {/* FIN DE LOCATION-MAPS */}
 <WhatsAppComponent />
       {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
