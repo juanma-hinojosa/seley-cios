@@ -10,6 +10,7 @@ function LocationMaps(props) {
             {props.h3}
           </h3>
         </div>
+      <h2 className="poppins-semibold">{props.h2}</h2>
       
       <p className="poppins-semibold">{props.p0}</p>
       <p className="poppins-semibold">{props.p1}</p>

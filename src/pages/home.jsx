@@ -242,6 +242,7 @@ function HomePage() {
       {/* FIN REVIEWS */}
       <LocationMaps 
         h3='contactanos'
+        h2= 'Agendamos tu consulta'
         p0='Direccion: Av. Siempreviva 123'
         p1='Telefono: 1100000000'
         p2='Horario en la semana: Lunes - Viernes 9hs- 19hs'
