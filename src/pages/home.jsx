@@ -14,6 +14,7 @@ import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
 import WhatsAppComponent from "../componets/WhatsAppComponent";
+import LocationMaps from "../componets/LocationMaps";
 
 function HomePage() {
   const servicesClinics = [
@@ -141,14 +142,14 @@ function HomePage() {
           <HeroComponent
             h1="Seley C.I.O.S"
             h2="Checkea Tu Salud Dental MAÑANA"
-            p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
+            p="ESTAMOS PARA CUIDAR DE TU SONRISA, "
           />
         </SwiperSlide>
         <SwiperSlide>
           <HeroComponent
             h1="Seley C.I.O.S"
             h2="Checkea Tu Salud Dental ayer"
-            p="ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
+            p="TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷"
           />
         </SwiperSlide>
       </Swiper>
@@ -239,6 +240,13 @@ function HomePage() {
         </div>
       </section>
       {/* FIN REVIEWS */}
+      <LocationMaps 
+        h3='contactanos'
+        p0='Direccion: Av. Siempreviva 123'
+        p1='Telefono: 1100000000'
+        p2='Horario en la semana: Lunes - Viernes 9hs- 19hs'
+        p3='Sabado de 9hs-12-hs'
+      />
       <WhatsAppComponent />
       {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
