@@ -34,8 +34,8 @@ function HomePage() {
           clickable: true,
         }}
         autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
+          delay: 2000,
+          disableOnInteraction: true,
         }}
         navigation={false}
         modules={[Autoplay, EffectFade, Pagination, Navigation]}
