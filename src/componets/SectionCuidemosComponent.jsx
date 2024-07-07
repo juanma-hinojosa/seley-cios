@@ -6,7 +6,7 @@ function CuidemosComponent() {
   return (
     <section className="cuidemos-container">
       <figcaption>
-        <img src={backgrounAside} alt="" />
+        <img src={backgrounAside} alt="foto" />
       </figcaption>
       <HeaderAsideComponent
         h3="Cuidemos los Dientes"
