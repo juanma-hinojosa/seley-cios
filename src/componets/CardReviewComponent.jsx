@@ -3,7 +3,7 @@ import "../css/card-review-component.css";
 
 function CardReviewComponent(props) {
   return (
-    <figure className='poppins-regular review-container' key={props.id} >
+    <figure data-aos='fade-up' className='poppins-regular review-container' key={props.id} >
       <div className='name-review'>
         <i className="fa-regular fa-user"></i>
         <h2>{props.name}</h2>

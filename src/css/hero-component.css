@@ -38,3 +38,23 @@
   justify-content: space-around;
   align-items: center;
 }
+
+@media screen and (max-width: 727px) {
+  .hero-content .section-info  {
+   justify-content: center;
+   text-align: center;
+   padding-inline: 40px;
+  }
+
+  .hero-content .section-info article h1 {
+    color: aliceblue;
+    border-bottom: 3px solid var(--violet);
+    margin-bottom: 30px;
+  }
+
+  .hero-content .section-info article h2 {
+    font-size: 2.1rem;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}

@@ -50,17 +50,19 @@
   line-height: 45px;
   color: #fff;
   margin-right: 10px;
-  background-color: #0d2033;
+  background-color: var(--violet);
   text-align: center;
   transition: all 300ms ease;
+  border-radius: 30px;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover{
   color: #813EAA;
+  background-color: #fff;
 }
 
 .pie-pagina .grupo-2{
-  background-color: #0a1a2a;
+  background-color: var(--violet);
   padding: 15px 10px;
   text-align: center;
   color: #fff;

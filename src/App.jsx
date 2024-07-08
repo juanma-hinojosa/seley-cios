@@ -5,7 +5,9 @@ import HomePage from "./pages/home";
 import ServicesPage from "./pages/services";
 import FooterComponent from "./componets/FooterComponent";
 
+
 function App() {
+  
   return (
     <>
       <BrowserRouter>

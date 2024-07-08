@@ -20,7 +20,7 @@ function HeroComponent(props) {
         </article>
       </div>
     </section>
-  );
+  ); 
 }
 
 export default HeroComponent;

@@ -1,11 +1,13 @@
 .review-container {
- background-color: aqua; 
- padding: 30px;  
+    background-color: rgb(242, 243, 245);
+    padding: 30px;  
 }
 
 .review-container>.name-review {
     display: flex;
     align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--violet);
 }
 
 .review-container>.name-review>i{

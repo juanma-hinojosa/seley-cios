@@ -2,7 +2,7 @@
 import '../css/card-services.css'
 function CardServicesComponent(props) {
   return (
-    <figure className="service-card poppins-regular">
+    <figure data-aos='fade-up' className="service-card poppins-regular">
       <figcaption className='service-img-container'>
         <img src={`src/images/${props.img}`} alt="Tarjeta de servicio" />
       </figcaption>

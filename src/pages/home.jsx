@@ -22,7 +22,14 @@ import WhatsAppComponent from "../componets/WhatsAppComponent";
 import LocationMaps from "../componets/LocationMaps";
 import CuidemosComponent from "../componets/SectionCuidemosComponent";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useEffect } from "react";
+
 function HomePage() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Swiper
@@ -75,8 +82,6 @@ function HomePage() {
       {/*FIN Servicios clinicos */}
 
       <section>
-        {/* Aca adentro creas tu parte de CUIDEMOS LOS DIENTES */}
-
         <CuidemosComponent />
       </section>
 
@@ -89,7 +94,7 @@ function HomePage() {
         />
         <article className="clinics-card-container poppins-regular">
           {infoClinics.map((info) => (
-            <figure key={info.id}>
+            <figure data-aos="fade-up" key={info.id}>
               <div>
                 <i className={info.icon}></i>
               </div>
@@ -105,7 +110,6 @@ function HomePage() {
       <section className="cuidados-contain">
         <figcaption>
           <video
-            // src='src/assets/images/about-vid.mp4'
             src={`src/videos/procedimientos.mp4`}
             loop
             muted
@@ -137,19 +141,29 @@ function HomePage() {
             />
           ))}
         </div>
-        
       </section>
       {/* FIN REVIEWS */}
-      <LocationMaps
-        h3="contactanos"
-        h2="Agendamos tu consulta"
-        p0="Direccion: Av. Siempreviva 123"
-        p1="Telefono: 1100000000"
-        p2="Horario en la semana: Lunes - Viernes 9hs- 19hs"
-        p3="Sabado de 9hs-12-hs"
-      />
+      <section className="location-container">
+        <LocationMaps
+          h3="contactanos"
+          h2="Agendamos tu consulta"
+          p0="Direccion: Av. Siempreviva 123"
+          p1="Telefono: 1100000000"
+          p2="Horario en la semana: Lunes - Viernes 9hs- 19hs"
+          p3="Sabado de 9hs-12-hs"
+        />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7366108738292!2d-58.433484025144715!3d-34.636095759207336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ed0b10ad%3A0x16753264cd65baeb!2sOdontolog%C3%ADa%20Integral%20%22C.I.O.S%22!5e0!3m2!1ses-419!2sar!4v1720466203666!5m2!1ses-419!2sar"
+          width="100%"
+          height="450"
+          style={{border: 0}}
+          allowfullscreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+
       <WhatsAppComponent />
-      {/* Para crear el footer tenes que ir a la carpeta components y el archivo FooterComponent */}
     </>
   );
 }

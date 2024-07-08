@@ -106,14 +106,14 @@ export const sliderBackground = [
   },
   {
     h1: "Seley C.I.O.S",
-    h2: "Checkea Tu Salud Dental MAÑANA",
-    p: "ESTAMOS PARA CUIDAR DE TU SONRISA, ",
+    h2: "Solicita tu turno ahora",
+    p: "Podemos darte turno en el dia por urgencias o dentro de las 24hs para solucionar tu malestar",
     img: "hero-section-home2",
   },
   {
     h1: "Seley C.I.O.S",
-    h2: "Checkea Tu Salud Dental ayer",
-    p: "TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷",
+    h2: "Tu Salud bucal es primordial",
+    p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
     img: "hero-section-home3",
   },
 ];
