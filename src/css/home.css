@@ -1,4 +1,7 @@
 /* services comienza */
+.space-section{
+  margin-top: 80px;
+}
 .services-cards-container {
   max-width: 1200px;
   margin: 0 auto;

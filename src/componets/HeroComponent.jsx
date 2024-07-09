@@ -16,11 +16,14 @@ function HeroComponent(props) {
           <h1>{props.h1}</h1>
           <h2>{props.h2}</h2>
           <p className="poppins-semibold">{props.p}</p>
-            <ButtonComponent nameLink="Hola 2" />
+          <ButtonComponent
+            nameLink="Contactanos"
+            url="https://wa.me/541132160533"
+          />
         </article>
       </div>
     </section>
-  ); 
+  );
 }
 
 export default HeroComponent;
