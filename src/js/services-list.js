@@ -54,7 +54,8 @@ export const infoClinics = [
     id: 2,
     title: "Obras Sociales",
     p: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed tenetur beatae fugiat!",
-    icon: "fa-brands fa-cc-visa",
+    // icon: "fa-brands fa-cc-visa",
+    icon: "fa-solid fa-address-card",
   },
   {
     id: 3,
