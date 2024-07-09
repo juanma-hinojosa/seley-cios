@@ -41,7 +41,7 @@ function HomePage() {
           clickable: true,
         }}
         autoplay={{
-          delay: 2000,
+          delay: 5000,
           disableOnInteraction: true,
         }}
         navigation={false}
@@ -63,7 +63,7 @@ function HomePage() {
       {/* Servicios clinicos */}
       <section className="services-clinics-contain">
         <HeaderTitleComponent
-          h2="la mejor calidad y servicio que podes obtener"
+          h2="la mejor calidad y servicio"
           h3="Servicios Clinicos"
           p="Para mantener tu salud bucal proveemos un rango amplio de tratamientos para nuestros pacientes"
         />
