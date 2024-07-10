@@ -8,7 +8,7 @@ function HeroComponent(props) {
       style={{
         backgroundImage: `  
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(../src/images/${props.img}.jpg)`,
+        url(${props.img})`,
       }}
     >
       <div className="section-info">

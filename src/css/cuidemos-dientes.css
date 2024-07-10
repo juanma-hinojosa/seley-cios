@@ -4,7 +4,7 @@
   display: grid;
   gap: 2rem;
 }
-
+ 
 .cuidemos-container figcaption {
     width: 100%;
 }
@@ -16,6 +16,13 @@
 @media (min-width: 600px) {
   .cuidemos-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+@media (max-width:600px) {
+  .cuidemos-container div {
+    padding: 0 20px;
   }
 }
 
