@@ -42,7 +42,7 @@ function HomePage() {
           clickable: true,
         }}
         autoplay={{
-          delay: 2000,
+          delay: 5000,
           disableOnInteraction: true,
         }}
         navigation={false}
@@ -117,11 +117,19 @@ function HomePage() {
             autoPlay
           ></video>
         </figcaption>
-        <HeaderAsideComponent
-          h3="cuidemos los diente"
-          h2="mira los videos de nuestros procedimientos"
-          p="Te invitamos a ver brevemente como trabajamos y nos importamos por cada paciente segun su urgencia y necesidad de la mejor manera"
-        />
+        <div>
+          <HeaderAsideComponent
+            h3="cuidemos los diente"
+            h2="mira los videos de nuestros procedimientos"
+            p="Te invitamos a ver brevemente como trabajamos y nos importamos por cada paciente segun su urgencia y necesidad de la mejor manera"
+          />
+
+          <div className="buttons-contain" style={{marginTop: '30px', display:'flex', justifyContent: 'space-between'}}>
+            <ButtonComponent nameLink="Ver Reels" url='https://instagram.com/dental.cios.rr?igshid=MzNlNGNkZWQ4Mg=='/>
+
+            <ButtonComponent nameLink="Ver Tutoriales" url='https://www.youtube.com/'/>
+          </div>
+        </div>
       </section>
       {/* FIN DE CUIDEMOS LOS DIENTES */}
 
@@ -151,7 +159,6 @@ function HomePage() {
       </section>
       {/* FIN REVIEWS */}
 
-      
       <section className="location-container space-section">
         <LocationMaps
           h3="contactanos"

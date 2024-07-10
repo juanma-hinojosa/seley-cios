@@ -103,6 +103,12 @@
   gap: 1rem;
 }
 
+.center-button {
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   .reviews-container {
     grid-template-columns: repeat(2, 1fr);
