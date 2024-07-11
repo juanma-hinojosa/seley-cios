@@ -52,9 +52,9 @@ export const infoClinics = [
   },
   {
     id: 2,
-    title: "Obras Sociales",
-    p: "Aceptamos obras sociales del Pamy (consultar por otras)",
-    icon: "fa-solid fa-id-card",
+    title: "Tarjetas de Credito",
+    p: "Aceptamos todas las tarjetas de credito",
+    icon: "fa-brands fa-cc-visa",
   },
   {
     id: 3,
@@ -88,7 +88,7 @@ export const reviewList = [
   {
     id: 4,
     name: "Ivanna Coronel",
-    p: "Me acerqué al consultorio de la doctora Seley con miedos e incertidumbres, al venir de muy malas experiencias odontologicas. Y realmente conocí el lugar ideal para tratar mi salud dental, es un lujo desde las instalaciones y los instrumentos de trabajo hasta el tacto y la dulzura de la doc y del cirujano, ambos son un amor y tuvieron paciencia conmigo al explicarme todo y realizar los trabajos con suma delicadeza. Estoy eternamente agradecida y seguiré concurriendo con ellos. Confianza 100%",
+    p: "Me acerqué al consultorio de la doctora Odontologia con miedos e incertidumbres, al venir de muy malas experiencias odontologicas. Y realmente conocí el lugar ideal para tratar mi salud dental, es un lujo desde las instalaciones y los instrumentos de trabajo hasta el tacto y la dulzura de la doc y del cirujano, ambos son un amor y tuvieron paciencia conmigo al explicarme todo y realizar los trabajos con suma delicadeza. Estoy eternamente agradecida y seguiré concurriendo con ellos. Confianza 100%",
   },
   {
     id: 5,
@@ -99,21 +99,42 @@ export const reviewList = [
 
 export const sliderBackground = [
   {
-    h1: "Seley C.I.O.S",
+    h1: "Odontologia C.I.O.S",
     h2: "Checkea Tu Salud Dental Hoy",
     p: "ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷",
     img: "https://i.ibb.co/x34NMwH/hero-section-home1.jpg",
   },
   {
-    h1: "Seley C.I.O.S",
+    h1: "Odontologia C.I.O.S",
     h2: "Solicita tu turno ahora",
     p: "Podemos darte turno en el dia por urgencias o dentro de las 24hs para solucionar tu malestar",
     img: "https://i.ibb.co/QnnC8dD/hero-section-home2.jpg",
   },
   {
-    h1: "Seley C.I.O.S",
+    h1: "Odontologia C.I.O.S",
     h2: "Tu Salud bucal es primordial",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
     img: "https://i.ibb.co/8KD9GNV/hero-section-home3.jpg",
+  },
+];
+
+export const sliderBackgroundMobile = [
+  {
+    h1: "Odontologia C.I.O.S",
+    h2: "Checkea Tu Salud Dental Hoy",
+    p: "ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷",
+    img: "https://i.ibb.co/d7pWHJn/mobile-hero1.jpg",
+  },
+  {
+    h1: "Odontologia C.I.O.S",
+    h2: "Solicita tu turno ahora",
+    p: "Podemos darte turno en el dia por urgencias o dentro de las 24hs para solucionar tu malestar",
+    img: "https://i.ibb.co/Z6ZMk79/mobile-hero2.jpg",
+  },
+  {
+    h1: "Odontologia C.I.O.S",
+    h2: "Tu Salud bucal es primordial",
+    p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
+    img: "https://i.ibb.co/0rQ3twH/mobile-hero3.jpg",
   },
 ];

@@ -5,6 +5,7 @@ import {
   reviewList,
   infoClinics,
   sliderBackground,
+  sliderBackgroundMobile,
 } from "../js/services-list";
 // Import Swiper styles
 import "swiper/css";
@@ -27,6 +28,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useEffect } from "react";
 import ButtonComponent from "../componets/ButtonComponent";
 import VideoAutoPlay from "../videos/procedimientos.mp4";
+import HeroMobile from "../componets/HeroMobileComponent";
 
 function HomePage() {
   useEffect(() => {
@@ -35,7 +37,7 @@ function HomePage() {
   return (
     <>
       <Swiper
-        id="home"
+        id="carusel-desktop"
         effect={"fade"}
         slidesPerView={1}
         spaceBetween={30}
@@ -54,6 +56,35 @@ function HomePage() {
         {sliderBackground.map((slide, index) => (
           <SwiperSlide key={index}>
             <HeroComponent
+              h1={slide.h1}
+              h2={slide.h2}
+              p={slide.p}
+              img={slide.img}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <Swiper
+        id="carusel-mobile"
+        effect={"fade"}
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: true,
+        }}
+        navigation={false}
+        modules={[Autoplay, EffectFade, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {sliderBackgroundMobile.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <HeroMobile
               h1={slide.h1}
               h2={slide.h2}
               p={slide.p}
@@ -165,8 +196,8 @@ function HomePage() {
         </div>
         <div className="center-button">
           <ButtonComponent
-            nameLink="Ver Reviews"
-            url="https://www.google.com.ar/maps/place/Odontolog%C3%ADa+Integral+%22C.I.O.S%22/@-34.6362638,-58.431473,15.83z/data=!4m8!3m7!1s0x95bccb28ed0b10ad:0x16753264cd65baeb!8m2!3d-34.6361002!4d-58.4309091!9m1!1b1!16s%2Fg%2F11sv9scly_?entry=ttu"
+            nameLink="Ver Comentarios"
+            url="https://maps.app.goo.gl/8uQLsRacdTEhom8r9"
           />
         </div>
       </section>
@@ -177,8 +208,8 @@ function HomePage() {
           <LocationMaps
             h3="contactanos"
             h2="Agendamos tu consulta"
-            p0="Direccion: Av. Siempreviva 123"
-            p1="Telefono: 1100000000"
+            p0="Direccion: Beauchef 1612 planta baja, C1424 Cdad. Autónoma de Buenos Aires"
+            p1="Telefono: 1132160533"
             p2="Horario en la semana: Lunes - Viernes 9hs- 19hs"
             p3="Sabado de 9hs-12-hs"
           />

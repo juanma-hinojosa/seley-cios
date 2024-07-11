@@ -1,0 +1,32 @@
+.hero-mobile {
+  height: 88vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-mobile div {
+  padding: 0 20px;
+}
+
+.hero-mobile div article h1 {
+    font-weight: 900;
+    margin-bottom: 10px;
+  font-size: 1.9rem;
+  color: aliceblue;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--violet);
+}
+.hero-mobile div article h2 {
+  font-size: 2.1rem;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.hero-mobile div article p {
+  margin-bottom: 30px;
+}

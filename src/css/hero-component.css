@@ -39,6 +39,8 @@
   align-items: center;
 }
 
+
+
 @media screen and (max-width: 727px) {
   .hero-content .section-info  {
    justify-content: center;
