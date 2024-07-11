@@ -42,7 +42,7 @@ export const infoClinics = [
     id: 0,
     title: "Medios de Pago",
     p: "Contamos con una amplia variedad de medios de pago, debito, transferencia y efectivo",
-    icon: "fa-solid fa-piggy-bank",
+    icon: "fa-solid fa-hand-holding-dollar",
   },
   {
     id: 1,

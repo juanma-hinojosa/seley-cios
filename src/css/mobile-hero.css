@@ -18,8 +18,9 @@
     margin-bottom: 10px;
   font-size: 1.9rem;
   color: aliceblue;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--violet);
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--violet); */
+border-bottom: 1px solid aliceblue;
 }
 .hero-mobile div article h2 {
   font-size: 2.1rem;
