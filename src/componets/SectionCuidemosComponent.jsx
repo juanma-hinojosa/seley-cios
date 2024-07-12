@@ -1,7 +1,7 @@
 import HeaderAsideComponent from "./HeaderAsideComponent";
 import backgrounAside from "../images/card-component.jpg.jpg";
 import "../css/cuidemos-dientes.css";
-import ButtonComponent from "./ButtonComponent";
+// import ButtonComponent from "./ButtonComponent";
 
 function CuidemosComponent() {
   return (
@@ -16,7 +16,7 @@ function CuidemosComponent() {
           p="Algunas personas piensan que con limpiar los dientes un par de veces al dia es suficiente para cuidar los dientes. Creemos que una boca sana va de la mano con controles Mensuales para prevenir futuras caries y problemas."
         />
 
-        <ButtonComponent nameLink="Instagram" />
+        {/* <ButtonComponent nameLink="Instagram" /> */}
       </div>
     </section>
   );

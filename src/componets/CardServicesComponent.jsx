@@ -4,7 +4,7 @@ function CardServicesComponent(props) {
   return (
     <figure data-aos='fade-up' className="service-card poppins-regular">
       <figcaption className='service-img-container'>
-        <img src={`src/images/${props.img}`} alt="Tarjeta de servicio" />
+        <img src={props.img} alt="Tarjeta de servicio" />
       </figcaption>
 
       <article>

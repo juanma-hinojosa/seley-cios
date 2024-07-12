@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import logo from "../images/logo.jpg";
 function NavbarComponent() {
   const navLinks = [
-    { id: 0, path: "/", name: "inicio" },
-    { id: 1, path: "/services", name: "servicios" },
-    { id: 2, path: "/services", name: "contacto" },
-    { id: 3, path: "/services", name: "nosotros" },
-    { id: 4, path: "/services", name: "reseñas" },
+    { id: 0, path: "#home", name: "inicio" },
+    { id: 1, path: "#servicios", name: "servicios" },
+    { id: 2, path: "#nosotros", name: "nosotros" },
+    { id: 3, path: "#reviews", name: "reseñas" },
+    { id: 4, path: "#contacto", name: "contacto" },
   ];
 
   function openMenu() {
@@ -33,9 +32,9 @@ function NavbarComponent() {
           <ul className="nav-list">
             {navLinks.map((link) => (
               <li key={link.id}>
-                <Link onClick={closeMenu} to={link.path}>
+                <a onClick={closeMenu} href={link.path}>
                   {link.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

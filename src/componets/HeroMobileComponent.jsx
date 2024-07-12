@@ -1,10 +1,10 @@
-import ButtonComponent from "./ButtonComponent";
-
+import ButtonComponent from "./ButtonComponent"
+import '../css/mobile-hero.css'
 /* eslint-disable react/prop-types */
-function HeroComponent(props) {
-  return (
+function HeroMobile(props) {
+    return(
     <section
-      className="hero-content poppins-regular"
+      className="hero-mobile poppins-regular"
       style={{
         backgroundImage: `  
         linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -13,7 +13,7 @@ function HeroComponent(props) {
     >
       <div className="section-info">
         <article>
-          <h1>{props.h1}</h1>
+          <h1>{props.h1}</h1> 
           <h2>{props.h2}</h2>
           <p className="poppins-semibold">{props.p}</p>
           <ButtonComponent
@@ -23,7 +23,7 @@ function HeroComponent(props) {
         </article>
       </div>
     </section>
-  );
+  )
 }
 
-export default HeroComponent;
+export default HeroMobile

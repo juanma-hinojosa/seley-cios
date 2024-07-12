@@ -6,18 +6,14 @@ function FooterComponent() {
     return new Date().getFullYear();
   }
   return (
-    <footer className="pie-pagina poppins-regular">
+    <footer className="pie-pagina poppins-regular space-section">
       <div className="grupo-1">
         <div className="box">
-          <figure>
-            <a href="#">
-              {/* <h1>LOGO</h1> */}
+          <figure className="footer-img">
               <img
-                // className="logo"
                 src={logo}
                 alt="logo seley odontologia cios"
               />
-            </a>
           </figure>
         </div>
         <div className="box">

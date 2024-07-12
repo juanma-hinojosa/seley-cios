@@ -2,7 +2,7 @@
 import "../css/button-component.css";
 function ButtonComponent(props) {
   return (
-    <a className="button-container poppins-regular" href="#">
+    <a target="_blank" className="button-container poppins-regular" href={props.url}>
       {props.nameLink}
     </a>
   );

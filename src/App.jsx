@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavbarComponent from "./componets/NavbarComponent";
 import HomePage from "./pages/home";
-import ServicesPage from "./pages/services";
 import FooterComponent from "./componets/FooterComponent";
+import ErrorPage from "./pages/errorpage";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <NavbarComponent />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
         <FooterComponent />
       </BrowserRouter>
