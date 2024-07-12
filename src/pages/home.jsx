@@ -168,10 +168,10 @@ function HomePage() {
               url="https://instagram.com/dental.cios.rr?igshid=MzNlNGNkZWQ4Mg=="
             />
 
-            <ButtonComponent
+            {/* <ButtonComponent
               nameLink="Ver Tutoriales"
               url="https://www.youtube.com/"
-            />
+            /> */}
           </div>
         </div>
       </section>
