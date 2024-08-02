@@ -20,9 +20,7 @@ function FooterComponent() {
           <h2>CONTACTOS</h2>
 
           <p>1132160533</p>
-          <p>hello@dental.com</p>
-          <p>press@dental.com</p>
-          <p>contact@dental.com</p>
+          <p>cios.dental.rr@gmail.com</p>
         </div>
         <div className="box">
           <h2>SIGUENOS EN NUESTRAS REDES</h2>

@@ -135,6 +135,6 @@ export const sliderBackgroundMobile = [
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
-    img: "https://i.ibb.co/0rQ3twH/mobile-hero3.jpg",
+    img: "https://plus.unsplash.com/premium_photo-1674179010598-6f8a862b5ef5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGRlbnRpc3RhJTIwY29maW5hfGVufDB8MXwwfHx8MA%3D%3D",
   },
 ];
