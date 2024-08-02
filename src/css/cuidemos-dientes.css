@@ -13,6 +13,7 @@
     width: 100%;
 }
 
+
 @media (min-width: 600px) {
   .cuidemos-container {
     grid-template-columns: repeat(1, 1fr);

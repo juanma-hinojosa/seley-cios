@@ -100,9 +100,9 @@ function HomePage() {
         className="services-clinics-contain space-section"
       >
         <HeaderTitleComponent
-          h2="la mejor calidad y servicio"
+          h2="Priorizamos la calidad y atencion para con nuestros clientes"
           h3="Servicios Clinicos"
-          p="Para mantener tu salud bucal proveemos un rango amplio de tratamientos para nuestros pacientes"
+          p="Contamos con todas las especialidades para brindarte un tratamiento adecuado a cuidado de tu salud oral"
         />
 
         <article className="services-cards-container">
@@ -127,7 +127,7 @@ function HomePage() {
         <HeaderTitleComponent
           h2="disfruta de la experiencia en nuestras clinicas"
           h3="nuestras clinicas"
-          p="Contamos con un agradable lugar y sala de espera con Television, Wi-Fi, Aire Acondicionado, Calefaccion y mas"
+          p="Contamos con una comoda sala de espera con servicios de TV, Lectura, Cobertura de WIFI, ambiente calefaccionado, dispensador de agua mineral y mas"
         />
         <article className="clinics-card-container poppins-regular">
           {infoClinics.map((info) => (
@@ -150,7 +150,7 @@ function HomePage() {
         </figcaption>
         <div>
           <HeaderAsideComponent
-            h3="cuidemos los diente"
+            h3="cuidemos los dientes"
             h2="mira los videos de nuestros procedimientos"
             p="Te invitamos a ver brevemente como trabajamos y nos importamos por cada paciente segun su urgencia y necesidad de la mejor manera"
           />
@@ -159,19 +159,12 @@ function HomePage() {
             className="buttons-contain"
             style={{
               marginTop: "30px",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <ButtonComponent
               nameLink="Ver Reels"
-              url="https://instagram.com/dental.cios.rr?igshid=MzNlNGNkZWQ4Mg=="
+              url="https://www.instagram.com/dental.cios.rr/reels/"
             />
-
-            {/* <ButtonComponent
-              nameLink="Ver Tutoriales"
-              url="https://www.youtube.com/"
-            /> */}
           </div>
         </div>
       </section>
@@ -207,11 +200,11 @@ function HomePage() {
         <div>
           <LocationMaps
             h3="contactanos"
-            h2="Agendamos tu consulta"
-            p0="Direccion: Beauchef 1612 planta baja, C1424 Cdad. Autónoma de Buenos Aires"
-            p1="Telefono: 1132160533"
-            p2="Horario en la semana: Lunes - Viernes 9hs- 19hs"
-            p3="Sabado de 9hs-12-hs"
+            h2="Agendemos tu consulta"
+            p0="Estamos ubicados en Capital Federal, en la calle Beauchef 1612 PB"
+            p1="Nuestro telefono de contacto es: 1132160533 (WhatsApp)"
+            p2="Horario en atencion: LUN a VIE de 09 a 18"
+            p3="SAB de 9hs-14hs"
           />
         </div>
 

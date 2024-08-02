@@ -19,18 +19,17 @@ function FooterComponent() {
         <div className="box">
           <h2>CONTACTOS</h2>
 
-          <p>1138393736</p>
+          <p>1132160533</p>
           <p>hello@dental.com</p>
           <p>press@dental.com</p>
           <p>contact@dental.com</p>
         </div>
         <div className="box">
-          <h2>SIGUENOS</h2>
+          <h2>SIGUENOS EN NUESTRAS REDES</h2>
           <div className="red-social">
-            <a href="#" className="fa fa-facebook"></a>
-            <a href="#" className="fa fa-instagram"></a>
-            <a href="#" className="fa fa-twitter"></a>
-            <a href="#" className="fa fa-youtube"></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100093691209138&_rdc=1&_rdr" className="fa fa-facebook"></a>
+            <a target="_blank" href="https://www.instagram.com/dental.cios.rr/" className="fa fa-instagram"></a>
+            <a target="_blank" href="https://maps.app.goo.gl/9cKrbrwPJUt1XB6F6" className="fa-solid fa-location-dot"></a>
           </div>
         </div>
       </div>

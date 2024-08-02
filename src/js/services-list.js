@@ -1,38 +1,38 @@
 export const servicesClinics = [
   {
     id: 0,
-    title: "Caries",
-    p: "Procedimiento en el que la pieza dental es recuperada evitando asi un problema mayor para el paciente en el futuro",
+    title: "Obturaciones: Arreglo de caries",
+    p: "El paciente debe ser saber que siempre se intentara salvar la pieza dental con el tratamiento menos invasivo posible. Empleamos resinas de alta calidad para que los arreglos permanezcan en el tiempo.",
     img: "https://i.ibb.co/NFbTKR0/services-1.jpg",
   },
   {
     id: 1,
     title: "Endodoncia",
-    p: "Quitamos el dolor del nervio por medio de este procedimeinto evitando asi una extraccion de la pieza",
+    p: "Cuando las bacterias han causado grande caries en tus dientes y no es posible su arreglo mediante el empleo de tecnicas de operatoria, es necesario realizar un tratamiento de conducto mediante el procedimiento correcto",
     img: "https://i.ibb.co/0mFjL54/services-2.jpg",
   },
   {
     id: 2,
     title: "Ortodoncia",
-    p: "Logramos obtener una sonrisa linda y asi el paciente despues del tratamiento esta listo para sonrreir",
+    p: "Tratamiento con el que se busca mejorar tu sonrisa de manera estetica y funcional para brindarte seguridad al disfrutar esos momentos de felicidad sonriendo. Mediante la consulta te brindaremos el tratamiento mas adecuado con tu diagnostico y acorde a tu economia.",
     img: "https://i.ibb.co/XZ1GpmL/services-3.jpg",
   },
   {
     id: 3,
     title: "Blanqueamineto",
-    p: "Procedimeinto estetico que embellece la sonrisa del paciente",
+    p: "Mediante un blanqueamiento, se logra recuperar ese blanco que tanto deseas y te gustaria lucir en tus reuniones con aquellos que mas quieres. De manera ambulatoria o en consultorio, resultados inncreibles en la primera sesion, debido al empleo de materiales odontologicos de primera marcas.",
     img: "https://i.ibb.co/zSGBW8f/services-4.jpg",
   },
   {
     id: 4,
     title: "Implantes",
-    p: "El implante cumple la funcion de remplazar piezas faltantes y asi lograr subir la confianza y autoestima del paciente",
+    p: "Cuando se ha perdido una pieza dental natural, queda un espacio entre dientes y lo mas adecuado es poder reemplazarlo mediante una intervencion con implantes. Trabajamos con productos nacionales e importados. Te brindaremos el mas adecuado tratamiento mediante estudios previos para analizar tu caso en particular.",
     img: "https://i.ibb.co/n6QNdLf/services-5.jpg",
   },
   {
     id: 5,
-    title: "Extracciones",
-    p: "Este procedimeinto es el ultimo recurso para casos de muelas de jucios y casos irrecuperables de piezas dentales fracturadas",
+    title: "Exodoncia",
+    p: "Cuando no ha sido posible la recuperacion de la pieza dental mediante tratamientos alternativos, se debe extraer la misma para aliviar la molestia y el dolor. Es necesario para ello contar con estudios previos y realizar una extraccion causando el menor daño posible para una pronta recuperacion.",
     img: "https://i.ibb.co/Xjq8F7S/services-6.jpg",
   },
 ];
@@ -46,8 +46,8 @@ export const infoClinics = [
   },
   {
     id: 1,
-    title: "Horarios de Atencion",
-    p: "Atendemos de Lunes a Sabados y por urgencias se puede acercar al consultorio en esos dias",
+    title: "Horarios de Atencion: Con turnos previos",
+    p: "Atendemos de Lunes a Viernes de 09:00hs a 18:00hs. Sabados de 09:00 a 14:00. Tambien atendemos por demanda espontanea de urgencia odontologicas",
     icon: "fa-solid fa-clock",
   },
   {
@@ -99,20 +99,20 @@ export const reviewList = [
 
 export const sliderBackground = [
   {
-    h1: "Odontologia C.I.O.S",
-    h2: "Checkea Tu Salud Dental Hoy",
-    p: "ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h2: "Cuidamos de tu salud oral",
+    p: "Que esperas para agendar un turno",
     img: "https://i.ibb.co/x34NMwH/hero-section-home1.jpg",
   },
   {
-    h1: "Odontologia C.I.O.S",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Solicita tu turno ahora",
-    p: "Podemos darte turno en el dia por urgencias o dentro de las 24hs para solucionar tu malestar",
+    p: "Amplia agenda disponible para evitar que esperes demasiado..",
     img: "https://i.ibb.co/QnnC8dD/hero-section-home2.jpg",
   },
   {
-    h1: "Odontologia C.I.O.S",
-    h2: "Tu Salud bucal es primordial",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
     img: "https://i.ibb.co/8KD9GNV/hero-section-home3.jpg",
   },
@@ -120,20 +120,20 @@ export const sliderBackground = [
 
 export const sliderBackgroundMobile = [
   {
-    h1: "Odontologia C.I.O.S",
-    h2: "Checkea Tu Salud Dental Hoy",
-    p: "ESTAMOS PARA CUIDAR DE TU SONRISA, TU SOLO DEBES DISFRUTAR DE ESOS MOMENTOS.🦷",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h2: "Cuidamos de tu salud oral",
+    p: "Que esperas para agendar un turno",
     img: "https://i.ibb.co/d7pWHJn/mobile-hero1.jpg",
   },
   {
-    h1: "Odontologia C.I.O.S",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Solicita tu turno ahora",
-    p: "Podemos darte turno en el dia por urgencias o dentro de las 24hs para solucionar tu malestar",
+    p: "Amplia agenda disponible para evitar que esperes demasiado..",
     img: "https://i.ibb.co/Z6ZMk79/mobile-hero2.jpg",
   },
   {
-    h1: "Odontologia C.I.O.S",
-    h2: "Tu Salud bucal es primordial",
+    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
     img: "https://i.ibb.co/0rQ3twH/mobile-hero3.jpg",
   },
