@@ -27,7 +27,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import { useEffect } from "react";
 import ButtonComponent from "../componets/ButtonComponent";
-import VideoAutoPlay from "../videos/procedimientos.mp4";
+import VideoAutoPlay from "/videos/procedimientos.mp4";
 import HeroMobile from "../componets/HeroMobileComponent";
 
 function HomePage() {
