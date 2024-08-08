@@ -1,5 +1,9 @@
-import logo from "../images/logo.jpg";
+import { useState } from "react";
+import logo from "../images/logo-png.png";
+
 function NavbarComponent() {
+  const [navbar, setNavbar] = useState(false);
+
   const navLinks = [
     { id: 0, path: "#home", name: "inicio" },
     { id: 1, path: "#servicios", name: "servicios" },
@@ -8,6 +12,17 @@ function NavbarComponent() {
     { id: 4, path: "#contacto", name: "contacto" },
   ];
 
+  
+  const changeBackground = () => {
+    if (window.scrollY >= 50) {
+      setNavbar(true);
+    } else {
+      setNavbar(false)
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+ 
   function openMenu() {
     const nav = document.querySelector("#nav-container");
     nav.classList.add("visible");
@@ -19,7 +34,7 @@ function NavbarComponent() {
   }
 
   return (
-    <header className="header-container poppins-regular">
+    <header className={navbar ? 'header-container active poppins-regular' : 'header-container poppins-regular'}>
       <section>
         <img className="logo" src={logo} alt="logo seley odontologia cios" />
         <div onClick={openMenu} className="abrir-menu" id="abrir-menu">

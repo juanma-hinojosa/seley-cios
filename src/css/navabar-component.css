@@ -3,12 +3,24 @@
 /* position: fixed; */
 width: 100%;
 }
-.header-container section {
+
+.header-container {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header-container.active {
   background-color: var(--violet);
+}
+
+.header-container section {
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1200px; 
   margin: 0 auto;
   padding: 1rem 2rem;
   /* position: fixed;

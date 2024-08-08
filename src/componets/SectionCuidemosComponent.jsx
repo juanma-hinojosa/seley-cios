@@ -7,7 +7,7 @@ function CuidemosComponent() {
   return (
     <section className="cuidemos-container">
       <figcaption>
-        <img data-aos="zoom-in" src={backgrounAside} alt="foto" />
+        <img data-aos="zoom-in" src={backgrounAside} alt="Foto de cuidemos" />
       </figcaption>
       <div>
         <HeaderAsideComponent
