@@ -8,6 +8,5 @@
 }
 
 .button-container:hover  {
-    background-color: aliceblue;
-    color: var(--violet);
+    background-color: #623c72;
 }

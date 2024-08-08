@@ -6,7 +6,7 @@ function FooterComponent() {
     return new Date().getFullYear();
   }
   return (
-    <footer className="pie-pagina poppins-regular space-section">
+    <footer className="pie-pagina poppins-regular">
       <div className="grupo-1">
         <div className="box">
           <figure className="footer-img">

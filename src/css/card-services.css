@@ -1,6 +1,8 @@
 .services-cards-container > .service-card {
-  transition: .5s;
+  transition: .3s;
   background-color: rgb(242, 243, 245);
+  box-shadow: none;
+
 }
 
 .services-cards-container > .service-card > .service-img-container {

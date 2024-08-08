@@ -3,37 +3,37 @@ export const servicesClinics = [
     id: 0,
     title: "Obturaciones: Arreglo de caries",
     p: "El paciente debe ser saber que siempre se intentara salvar la pieza dental con el tratamiento menos invasivo posible. Empleamos resinas de alta calidad para que los arreglos permanezcan en el tiempo.",
-    img: "/img/services-1.jpg",
+    img: "https://i.imgur.com/U394v2h.jpeg",
   },
   {
     id: 1,
     title: "Endodoncia",
     p: "Cuando las bacterias han causado grande caries en tus dientes y no es posible su arreglo mediante el empleo de tecnicas de operatoria, es necesario realizar un tratamiento de conducto mediante el procedimiento correcto",
-    img: "/img/services-2.jpg",
+    img: "https://i.imgur.com/yrThUdd.jpeg",
   },
   {
     id: 2,
     title: "Ortodoncia",
     p: "Tratamiento con el que se busca mejorar tu sonrisa de manera estetica y funcional para brindarte seguridad al disfrutar esos momentos de felicidad sonriendo. Mediante la consulta te brindaremos el tratamiento mas adecuado con tu diagnostico y acorde a tu economia.",
-    img: "/img/services-3.jpg",
+    img: "https://i.imgur.com/goUof65.jpeg",
   },
   {
     id: 3,
     title: "Blanqueamineto",
     p: "Mediante un blanqueamiento, se logra recuperar ese blanco que tanto deseas y te gustaria lucir en tus reuniones con aquellos que mas quieres. De manera ambulatoria o en consultorio, resultados inncreibles en la primera sesion, debido al empleo de materiales odontologicos de primera marcas.",
-    img: "/img/services-4.jpg",
+    img: "https://i.imgur.com/1i85TQx.jpeg",
   },
   {
     id: 4,
     title: "Implantes",
     p: "Cuando se ha perdido una pieza dental natural, queda un espacio entre dientes y lo mas adecuado es poder reemplazarlo mediante una intervencion con implantes. Trabajamos con productos nacionales e importados. Te brindaremos el mas adecuado tratamiento mediante estudios previos para analizar tu caso en particular.",
-    img: "/img/services-5.jpg",
+    img: "https://i.imgur.com/dAWtPVd.jpeg",
   },
   {
     id: 5,
     title: "Exodoncia",
     p: "Cuando no ha sido posible la recuperacion de la pieza dental mediante tratamientos alternativos, se debe extraer la misma para aliviar la molestia y el dolor. Es necesario para ello contar con estudios previos y realizar una extraccion causando el menor daño posible para una pronta recuperacion.",
-    img: "/img/services-6.jpg",
+    img: "https://i.imgur.com/esP7VEI.jpeg",
   },
 ];
 
@@ -102,19 +102,19 @@ export const sliderBackground = [
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Cuidamos de tu salud oral",
     p: "Que esperas para agendar un turno",
-    img: "https://i.ibb.co/x34NMwH/hero-section-home1.jpg",
+    img: "https://i.imgur.com/Bz2yYAI.jpeg",
   },
   {
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Solicita tu turno ahora",
     p: "Amplia agenda disponible para evitar que esperes demasiado..",
-    img: "https://i.ibb.co/QnnC8dD/hero-section-home2.jpg",
+    img: "https://i.imgur.com/a6MB8Y4.jpeg",
   },
   {
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
-    img: "https://i.ibb.co/8KD9GNV/hero-section-home3.jpg",
+    img: "https://i.imgur.com/4Ci1B4k.jpeg",
   },
 ];
 
@@ -123,18 +123,18 @@ export const sliderBackgroundMobile = [
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Cuidamos de tu salud oral",
     p: "Que esperas para agendar un turno",
-    img: "/img/mobile-hero1.jpg",
+    img: "https://i.imgur.com/QE9WPOU.jpeg",
   },
   {
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Solicita tu turno ahora",
     p: "Amplia agenda disponible para evitar que esperes demasiado..",
-    img: "/img/mobile-hero2.jpg",
+    img: "https://i.imgur.com/XsXDW8v.jpeg",
   },
   {
     h1: "Centro Odontologico integral SEL 'C.I.O.S'",
     h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
-    img: "/img/mobile-hero3.jpg",
+    img: "https://i.imgur.com/V8L2IMtl.jpg",
   },
 ];
