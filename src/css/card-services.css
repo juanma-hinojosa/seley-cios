@@ -1,52 +1,139 @@
-.services-cards-container > .service-card {
-  transition: .3s;
-  background-color: rgb(242, 243, 245);
-  box-shadow: none;
-
-}
-
-.services-cards-container > .service-card > .service-img-container {
-  width: 100%;
-}
-
-.services-cards-container > .service-card > .service-img-container > img {
-  width: 100%;
-}
-
-.services-cards-container > .service-card > article {
-  /* text-align: center; */
+/* General container */
+.implant-section {
   padding: 20px;
-
+  margin: auto;
+  /* background-color: #d0e4eb; */
+  background-color: #d0e4eb;
+  border-radius: 15px;
+  max-width: 800px;
 }
 
-.services-cards-container > .service-card > article h1 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid var(--violet);
-  margin-bottom: 20px;
-  color: var(--violet);
+/* Card layout */
+.implant-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.services-cards-container > .service-card > article p {
-  font-weight: 500;
-  font-size: .9rem;
+/* Image figure */
+.implant-figure {
+  margin: 0;
+  width: 100%;
 }
 
-.services-cards-container > .service-card:hover{
-  box-shadow: -1px 10px 33px 4px rgba(0,0,0,0.28);
+/* Image */
+.implant-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
-/* 
-  
-  .services-cards-container > .service-card > div {
-    display: flex;
+
+/* Text content */
+.implant-text {
+  color: #2b3e4f;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.implant-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.implant-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Accessibility: hide figcaption visually but keep it for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
+}
+
+/* Responsive layout */
+@media (min-width: 768px) {
+  .implant-card {
+    flex-direction: row;
+  }
+
+  .implant-figure {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .implant-text {
+    flex: 1;
+  }
+}
+
+/* Card layout */
+.implant-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.implant-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #d0e4eb;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.implant-card.left {
+  flex-direction: row;
+}
+
+.implant-card.right {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .implant-card {
+    flex-direction: column !important;
     align-items: center;
   }
-  
-  .services-cards-container > .service-card > div > i {
-    font-size: 2rem;
-    color: var(--violet);
-    margin-right: 30px;
+
+  .center-line {
+    left: 10px;
   }
-  
-  .services-cards-container > .service-card > p {
-    color: #5d5959;
-  } */
+}
+
+.services-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+}
+
+/* Línea vertical en el centro */
+.services-cards-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #2b3e4f44; /* Color suave */
+  z-index: 1;
+}
+
+/* Asegurar que las tarjetas estén sobre la línea */
+.implant-card {
+  position: relative;
+  z-index: 2;
+}

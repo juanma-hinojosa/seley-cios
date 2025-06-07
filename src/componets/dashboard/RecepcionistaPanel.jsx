@@ -1,0 +1,110 @@
+import React, { useEffect, useState } from "react";
+import PacienteManager from "../odontologo/PacienteManager";
+import { Link, useNavigate } from "react-router-dom";
+import TurnosManager from "../odontologo/turnos/TurnoManager";
+import "../../css/dashboard/DashboardPage.css"
+import { Icon } from "@iconify/react";
+import logo from "/img/logo-white.png"
+
+const RecepcionistaPanel = () => {
+  const [view, setView] = useState("turnos");
+  const [user, setUser] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    setUser(storedUser);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/admin/login");
+  };
+
+  return (
+    <div className="admin-panel-container">
+      <aside className={`admin-aside ${isMenuOpen ? "open" : ""}`}>
+        <button
+          className="admin-close-btn"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <Icon icon="mdi:close" />
+        </button>
+        <nav className="admin-nav">
+          <Link to="/">
+            <figure
+              style={{
+                width: "100px",
+                height: "100px",
+                margin: "20px 0"
+              }}
+            >
+              <img style={{ width: "100%" }} src={logo} alt="logo seley" />
+            </figure>
+          </Link>
+
+          <ul className="poppins-light">
+            {/* <li onClick={() => { setView("empleados"); setIsMenuOpen(false); }}>
+              <Icon icon="mdi:account-group" /> Empleados
+            </li> */}
+            <li onClick={() => { setView("pacientes"); setIsMenuOpen(false); }}>
+              <Icon icon="mdi:account-heart" /> Pacientes
+            </li>
+            {/* <li onClick={() => { setView("historiaClinica"); setIsMenuOpen(false); }}>
+              <Icon icon="mdi:book-open-page-variant" /> Historia Clínica
+            </li> */}
+            <li onClick={() => { setView("turnos"); setIsMenuOpen(false); }}>
+              <Icon icon="mdi:calendar-clock" /> Turnos
+            </li>
+
+            <li onClick={handleLogout}>
+              <Icon icon="mdi:logout" /> Cerrar sesión
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main className="admin-main">
+        <header className="admin-header">
+          <button
+            className="admin-menu-toggle"
+            onClick={() => setIsMenuOpen(true)}
+          >
+            <Icon icon="mdi:menu" />
+          </button>
+          <h1 className="poppins-light">Panel de Administrador</h1>
+          {user && (
+            <div className="admin-user-info poppins-regular">
+              {/* <p><strong>Email:</strong> {user.email}</p> */}
+              {/* <p><strong >Rol:</strong> {user.role}</p> */}
+              <p><strong >Usuario/a:</strong> {user.name}</p>
+            </div>
+          )}
+        </header>
+
+        <section className="admin-panel-content"
+        // style={{
+        //   backgroundImage: "url('/img/logo-white.png')",
+        //   backgroundSize: "cover",
+        //   backgroundPosition: "center",
+        //   backgroundAttachment: "fixed",
+        //   backgroundRepeat: "no-repeat",
+        // }}
+        >
+          {/* {view === "empleados" && <EmpleadoManager />} */}
+          {view === "pacientes" && <PacienteManager />}
+          {/* {view === "historiaClinica" && <HistoriaClinicaManager />} */}
+          {view === "turnos" && <TurnosManager />}
+          {/* {view === "pagos" && <PagosManager />} */}
+
+          {/* {view === "tratamientos" && <TratamientosManager />} */}
+          {/* {view === "blog" && <BlogManager userRole={user?.role} />} */}
+          {/* {view === "flyers" && <FlyerManager />} */}
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default RecepcionistaPanel;

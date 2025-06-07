@@ -1,98 +1,53 @@
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  servicesClinics,
-  reviewList,
-  infoClinics,
-  sliderBackground,
-  sliderBackgroundMobile,
-} from "../js/services-list";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { servicesClinics } from "../js/services-list";
 
-import CardReviewComponent from "../componets/CardReviewComponent";
 import CardServicesComponent from "../componets/CardServicesComponent";
-import HeaderAsideComponent from "../componets/HeaderAsideComponent";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
 import HeroComponent from "../componets/HeroComponent";
-import WhatsAppComponent from "../componets/WhatsAppComponent";
-import LocationMaps from "../componets/LocationMaps";
-import CuidemosComponent from "../componets/SectionCuidemosComponent";
 
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-import { useEffect } from "react";
-import ButtonComponent from "../componets/ButtonComponent";
-// import VideoAutoPlay from "/videos/procedimientos.mp4";
-import HeroMobile from "../componets/HeroMobileComponent";
+import { useEffect, useState } from "react";
+import diente from "/img/diente.png"
+import ZoomOnScroll from "../componets/ZoomOnScroll";
+import CardSection from "../componets/CardSection";
+import consultorio from "/img/consultorio.webp"
+import ReviewBannerComponent from "../componets/ReviewBannerComponent";
+import DoctorProfile from "../componets/DoctorProfile";
+import TechnologySection from "../componets/TechnologySection";
+import GoogleMapEmbed from "../componets/GoogleMaps";
+import ContactInfo from "../componets/ContactInfoComponent";
+import FlyerPopup from "../componets/flyer/FlyerPopup";
+
+import video from "/videos/blog.mp4"
+import { Helmet } from "react-helmet-async";
 
 function HomePage() {
+  // const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
-    AOS.init();
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Para ejecutarlo al cargar
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+
   return (
     <>
-      <Swiper
-        id="carusel-desktop"
-        effect={"fade"}
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: true,
-        }}
-        navigation={false}
-        modules={[Autoplay, EffectFade, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {sliderBackground.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <HeroComponent
-              h1={slide.h1}
-              h2={slide.h2}
-              p={slide.p}
-              img={slide.img}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Helmet>
+        <title>Inicio | Odontología C.I.O.S Dental R&R</title>
+        <meta name="description" content="Odontologia C.I.O.S Dental Parque Chacabuco. Consultorio odontológico en CABA. Atención personalizada en ortodoncia y estética dental." />
+      </Helmet>
 
-      <Swiper
-        id="carusel-mobile"
-        effect={"fade"}
-        slidesPerView={1}
-        spaceBetween={30}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: true,
-        }}
-        navigation={false}
-        modules={[Autoplay, EffectFade, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {sliderBackgroundMobile.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <HeroMobile
-              h1={slide.h1}
-              h2={slide.h2}
-              p={slide.p}
-              img={slide.img}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+
+
+      <FlyerPopup />
+
+      <HeroComponent
+        video={video}
+      />
 
       {/* Servicios clinicos */}
       <section
@@ -101,125 +56,102 @@ function HomePage() {
       >
         <HeaderTitleComponent
           h2="Priorizamos la calidad y atencion para con nuestros clientes"
-          h3="Servicios Clinicos"
-          p="Contamos con todas las especialidades para brindarte un tratamiento adecuado a cuidado de tu salud oral"
+          h3="Consultorio C.I.O.S. R&R"
+          p="Cuando nos visites en Consultorio C.I.O.S. R&R, tu sonrisa es nuestra mayor prioridad. Nuestro equipo estara dedicado personalmente con, calidad y profezionalismo a tu servicio."
         />
+        <ZoomOnScroll src={diente} alt="Descripción de la imagen" />
 
+
+        <CardSection
+          h2="Creando hermosas sonrisas para la familia"
+          p="Esperamos darle la bienvenida a nuestra familia. Nuestra oficina es cálida y acogedora. Siempre será recibido con una sonrisa y tratado con la mayor dignidad y respeto. Participará activamente en su tratamiento y su voz será escuchada cuando tenga preguntas o inquietudes."
+          src={consultorio}
+        />
+        <HeaderTitleComponent
+          h2="Priorizamos la calidad y atencion para con nuestros clientes"
+          h3="Servicios Clinicos"
+          p="Contamos con todas las especialidades para brindarte un tratamiento adecuado a cuidado de tu salud oral. Nuestro objetivo es ayudar a cada paciente a lograr y mantener una salud dental duradera y una sonrisa hermosa. "
+        />
         <article className="services-cards-container">
-          {servicesClinics.map((service) => (
+          {servicesClinics.map((service, index) => (
             <CardServicesComponent
-              h1={service.title}
               key={service.id}
+              index={index}
+              h2={service.title}
               img={service.img}
               p={service.p}
+              className={index % 2 === 0 ? 'left' : 'right'}
+              aosType={
+                isMobile
+                  ? 'fade-up'
+                  : index % 2 === 0
+                    ? 'fade-right'
+                    : 'fade-left'
+              }
             />
           ))}
         </article>
       </section>
-      {/*FIN Servicios clinicos */}
 
-      <section className="space-section">
-        <CuidemosComponent />
-      </section>
+      <section
+        style={{
+          marginTop: '80px',
+          backgroundImage: "url('/img/hero-section-home1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundRepeat: "no-repeat",
+          padding: '50px 0',
 
-      {/* NUESTRAS CLINICAS */}
-      <section id="nosotros" className="clinics-container space-section">
-        <HeaderTitleComponent
-          h2="disfruta de la experiencia en nuestras clinicas"
-          h3="nuestras clinicas"
-          p="Contamos con una comoda sala de espera con servicios de TV, Lectura, Cobertura de WIFI, ambiente calefaccionado, dispensador de agua mineral y mas"
+        }}
+
+      >
+        <ReviewBannerComponent
+          p=" La doctora Seley Rodriguez fue una excelente profesional, se tomo el tiempo y cuidado personalizado por mi salud bucal,
+            me ayudo por medio de varios tratamientos odontologicos a recuperar mi confianza y autoestima, ya asisto al consultorio desde el 2020 y nunca tuve ningun problema con los tratamientos y cuidados. Los recomiendo."
+          autor="Juan H"
+          start={100}
+          end={204}
+          exito="Reseñas 5 estrellas!"
+
         />
-        <article className="clinics-card-container poppins-regular">
-          {infoClinics.map((info) => (
-            <figure data-aos="fade-up" key={info.id}>
-              <div>
-                <i className={info.icon}></i>
-              </div>
-              <h3>{info.title}</h3>
-              <p>{info.p}</p>
-            </figure>
-          ))}
-        </article>
       </section>
-      {/* FIN DE NUESTRAS CLINICAS */}
 
-      {/* CUIDEMOS LOS DIENTES */}
-      <section className="cuidados-contain space-section">
-        <figcaption>
-          <video src='https://i.imgur.com/nFc7h1z.mp4' loop muted autoPlay></video>
-        </figcaption>
-        <div>
-          <HeaderAsideComponent
-            h3="cuidemos los dientes"
-            h2="mira los videos de nuestros procedimientos"
-            p="Te invitamos a ver brevemente como trabajamos y nos importamos por cada paciente segun su urgencia y necesidad de la mejor manera"
-          />
+      <TechnologySection />
 
-          <div
-            className="buttons-contain"
-            style={{
-              marginTop: "30px",
-            }}
-          >
-            <ButtonComponent
-              nameLink="Ver Reels"
-              url="https://www.instagram.com/dental.cios.rr/reels/"
-            />
-          </div>
-        </div>
-      </section>
-      {/* FIN DE CUIDEMOS LOS DIENTES */}
 
-      {/* REVIEWS */}
-      <section id="reviews" className="space-section">
+      <DoctorProfile
+        p={
+          "La doctora Seley practico odontologia por mas 20 años, se recibio en la facultad de odontologia de la UBA en el 2005, ella hace sentir confotable y le da una guia a los pacientes y colegas con los que trabaja.\n" + "\n" +
+          "Ella aun continua educandoce en tecnicas y tratamientos junto nuevas habilidades para brindarle el mejor de los cuidados a sus pacientes, ella junto a su equipo han logrado crear un consultorio totalmente admirable."
+        }
+        pathUrl="/about"
+        path="Nosotros"
+      />
+
+      <section
+        style={{
+          // marginTop: '80px',
+          backgroundImage: "linear-gradient(rgba(214, 217, 219, 0.7), rgba(214, 217, 219, 0.8)),url('/img/hero-section-home1.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+          padding: '20px ',
+          margin: "80px 20px",
+          borderRadius: '10px',
+        }}
+      >
         <HeaderTitleComponent
-          h2="nuestra atencion en los ojos de los pacientes"
-          h3="Comentarios"
-          p="Opniones con sinceridad de los pacientes que pasan por nuestro consultorio"
+          h2="Una visita panoramica de nuestro consultorio"
+          p="No dude en entrar en contacto si tiene alguna duda, estamos dispuesto a responder."
         />
-
-        <div className="reviews-container">
-          {reviewList.map((review) => (
-            <CardReviewComponent
-              key={review.id}
-              name={review.name}
-              p={review.p}
-            />
-          ))}
-        </div>
-        <div className="center-button">
-          <ButtonComponent
-            nameLink="Ver Comentarios"
-            url="https://maps.app.goo.gl/8uQLsRacdTEhom8r9"
-          />
-        </div>
-      </section>
-      {/* FIN REVIEWS */}
-
-      <section id="contacto" className="location-container space-section">
-        <div>
-          <LocationMaps
-            h3="contactanos"
-            h2="Agendemos tu consulta"
-            p0="Estamos ubicados en Capital Federal, en la calle Beauchef 1612 PB"
-            p1="Nuestro telefono de contacto es: 1132160533 (WhatsApp)"
-            p2="Horario en atencion: LUN a VIE de 09 a 18"
-            p3="SAB de 9hs-14hs"
-          />
-        </div>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.7366108738292!2d-58.433484025144715!3d-34.636095759207336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb28ed0b10ad%3A0x16753264cd65baeb!2sOdontolog%C3%ADa%20Integral%20%22C.I.O.S%22!5e0!3m2!1ses-419!2sar!4v1720466203666!5m2!1ses-419!2sar"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
       </section>
 
-      <WhatsAppComponent />
+      <ContactInfo />
+      <GoogleMapEmbed />
+
+
     </>
   );
 }

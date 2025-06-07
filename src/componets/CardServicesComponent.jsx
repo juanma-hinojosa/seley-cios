@@ -1,20 +1,31 @@
 /* eslint-disable react/prop-types */
 import '../css/card-services.css'
+
 function CardServicesComponent(props) {
   return (
-    <figure data-aos='fade-up' className="service-card poppins-regular">
-      <figcaption className='service-img-container'>
-        <img src={props.img} alt="Tarjeta de servicio" />
-      </figcaption>
-
-      <article>
-        <h1>{props.h1}</h1>
-        <p>
+    <section className="implant-section" aria-labelledby="implant-title">
+      <article data-aos={props.aosType} className={`implant-card ${props.className}`}>
+        <figure className="implant-figure">
+          <img
+            src={props.img}
+            alt="Ilustración de implantes dentales incrustados en la mandíbula"
+            className="implant-image"
+            loading="lazy"
+          />
+          <figcaption className="visually-hidden">
+            Imagen representando cómo los implantes dentales se colocan en la mandíbula
+          </figcaption>
+        </figure>
+        <div className="implant-text">
+          <h2 id="implant-title" className='poppins-light'>{props.h2}</h2>
+          <p className='poppins-light'>
             {props.p}
-        </p>
+          </p>
+        </div>
       </article>
-    </figure>
+    </section>
   );
 }
 
 export default CardServicesComponent
+

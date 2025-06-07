@@ -1,62 +1,65 @@
-import { useState } from "react";
-import logo from "../images/logo-png.png";
+import "../css/components/navbar-component.css"
+import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+import Logo from "/img/logo-violeta.png";
+import { Icon } from "@iconify/react";
 
-function NavbarComponent() {
-  const [navbar, setNavbar] = useState(false);
+const NavbarComponent = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [showTopbar, setShowTopbar] = useState(true);
 
-  const navLinks = [
-    { id: 0, path: "#home", name: "inicio" },
-    { id: 1, path: "#servicios", name: "servicios" },
-    { id: 2, path: "#nosotros", name: "nosotros" },
-    { id: 3, path: "#reviews", name: "reseñas" },
-    { id: 4, path: "#contacto", name: "contacto" },
-  ];
+  const [scrolledDown, setScrolledDown] = useState(false);
 
+ useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
   
-  const changeBackground = () => {
-    if (window.scrollY >= 50) {
-      setNavbar(true);
-    } else {
-      setNavbar(false)
-    }
-  };
+      // Mostrar topbar y navbar transparente solo en Y = 0
+      if (currentScroll === 0) {
+        setShowTopbar(true);
+        setScrolledDown(false);
+      } else {
+        setShowTopbar(false);
+        setScrolledDown(true);
+      }  
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  
+  const closeMenu = () => setMenuOpen(false);
 
-  window.addEventListener("scroll", changeBackground);
- 
-  function openMenu() {
-    const nav = document.querySelector("#nav-container");
-    nav.classList.add("visible");
-  }
-
-  function closeMenu() {
-    const nav = document.querySelector("#nav-container");
-    nav.classList.remove("visible");
-  }
 
   return (
-    <header className={navbar ? 'header-container active poppins-regular' : 'header-container poppins-regular'}>
-      <section>
-        <img className="logo" src={logo} alt="logo seley odontologia cios" />
-        <div onClick={openMenu} className="abrir-menu" id="abrir-menu">
-          <i className="fa-solid fa-bars"></i>
-        </div>
-        <nav className="nav-container" id="nav-container">
-          <div onClick={closeMenu} id="cerrar-menu" className="cerrar-menu">
-            <i className="fa-solid fa-xmark"></i>
+    <>
+      {/* <div className={`topbar ${showTopbar ? 'show' : 'hide'}`}>
+        <div className="topbar-container ">
+          <span><Icon icon="tabler:clock" width="24" height="24" /> Lun - Vie 9:00 a 18:00. Sab 9:00 a 13:00. Dom - CERRADO</span>
+          <div className="topbar-right">
+            <span><Icon icon="tabler:phone" width="24" height="24" /> +54 1127706352</span>
+            <span><Icon icon="uiw:mail-o" width="20" height="20" /> consultoriointegralsanmarcos@gmail.com</span>
+            <span><Icon icon="tabler:map" width="24" height="24" /> Rivera 146, Villa Madero, Buenos Aires</span>
           </div>
-          <ul className="nav-list">
-            {navLinks.map((link) => (
-              <li key={link.id}>
-                <a onClick={closeMenu} href={link.path}>
-                  {link.name}
-                </a>
-              </li>
-            ))}
+        </div>
+      </div> */}
+
+      <nav className={`navbar ${scrolledDown ? 'scrolled' : ''}`}>
+        <div className="navbar-container poppins-regular">
+          <img src={Logo} alt="Logo" className="navbar-logo" />
+          <div className="hamburger" onClick={() => setMenuOpen(true)}>☰</div>
+          <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            <div className="close-btn" onClick={closeMenu}>✕</div>
+            <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
+            <li><Link to="/about" onClick={closeMenu}>Nosotros</Link></li>
+            <li><Link to="/services" onClick={closeMenu}>Especialidades</Link></li>
+            <li><Link to="/blogs" onClick={closeMenu}>Blogs</Link></li>
           </ul>
-        </nav>
-      </section>
-    </header>
+        </div>
+      </nav>
+    </>
   );
-}
+};
 
 export default NavbarComponent;

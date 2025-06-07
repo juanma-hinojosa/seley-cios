@@ -1,29 +1,34 @@
-import ButtonComponent from "./ButtonComponent";
+import React from 'react';
+import '../css/hero-component.css'; // O puedes usar CSS-in-JS como styled-components
 
-/* eslint-disable react/prop-types */
-function HeroComponent(props) {
+const HeroSection = (props) => {
+  const phoneNumber = '541132160533'; // reemplaza con tu número de WhatsApp
+  const message = 'Hola! Quisiera hacer una consulta.'; // mensaje opcional
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   return (
-    <section
-      className="hero-content poppins-regular"
-      style={{
-        backgroundImage: `  
-        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(${props.img})`,
-      }}
-    >
-      <div className="section-info">
-        <article>
-          <h1>{props.h1}</h1>
-          <h2>{props.h2}</h2>
-          <p className="poppins-semibold">{props.p}</p>
-          <ButtonComponent
-            nameLink="Contactanos"
-            url="https://wa.me/541132160533"
-          />
-        </article>
-      </div>
-    </section>
-  );
-}
+    <div className="hero-container ">
+      <video
+        className="hero-video"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src={props.video} type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
 
-export default HeroComponent;
+      <div className="hero-overlay">
+        <p className="hero-subtitle poppins-regular">Centro Odontologico integral SELEY 'C.I.O.S'</p>
+        <h1 className="hero-title poppins-light">
+          Tu salud Oral
+          <br className="hide-on-mobile" /> es nuestra principal prioridad
+        </h1>
+        <a href={url} target='_blank' className="hero-button poppins-light">CONTACTANOS</a>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;

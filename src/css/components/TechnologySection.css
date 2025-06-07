@@ -1,0 +1,54 @@
+.tech-section {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.tech-header {
+    max-width: 700px;
+}
+.tech-header h2 {
+  font-size: 2rem;
+  color: #2b3e4f;
+  margin-bottom: 1rem;
+}
+
+.tech-header p {
+  color: #4a5a6a;
+  font-size: 1rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #2b3e4f;
+}
+
+.tech-icon {
+  font-size: 1.5rem;
+  color: #000;
+  margin-right: 0.75rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .tech-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

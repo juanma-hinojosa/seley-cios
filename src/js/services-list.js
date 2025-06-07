@@ -3,37 +3,67 @@ export const servicesClinics = [
     id: 0,
     title: "Obturaciones: Arreglo de caries",
     p: "El paciente debe ser saber que siempre se intentara salvar la pieza dental con el tratamiento menos invasivo posible. Empleamos resinas de alta calidad para que los arreglos permanezcan en el tiempo.",
-    img: "https://i.imgur.com/U394v2h.jpeg",
+    img: "/img/obturaciones.jpg",
   },
   {
     id: 1,
     title: "Endodoncia",
     p: "Cuando las bacterias han causado grande caries en tus dientes y no es posible su arreglo mediante el empleo de tecnicas de operatoria, es necesario realizar un tratamiento de conducto mediante el procedimiento correcto",
-    img: "https://i.imgur.com/yrThUdd.jpeg",
+    img: "/img/endodoncia.jpg",
   },
   {
     id: 2,
     title: "Ortodoncia",
     p: "Tratamiento con el que se busca mejorar tu sonrisa de manera estetica y funcional para brindarte seguridad al disfrutar esos momentos de felicidad sonriendo. Mediante la consulta te brindaremos el tratamiento mas adecuado con tu diagnostico y acorde a tu economia.",
-    img: "https://i.imgur.com/goUof65.jpeg",
+    img: "/img/ortodoncia.jpg",
   },
-  {
-    id: 3,
-    title: "Blanqueamineto",
-    p: "Mediante un blanqueamiento, se logra recuperar ese blanco que tanto deseas y te gustaria lucir en tus reuniones con aquellos que mas quieres. De manera ambulatoria o en consultorio, resultados inncreibles en la primera sesion, debido al empleo de materiales odontologicos de primera marcas.",
-    img: "https://i.imgur.com/1i85TQx.jpeg",
-  },
-  {
-    id: 4,
-    title: "Implantes",
-    p: "Cuando se ha perdido una pieza dental natural, queda un espacio entre dientes y lo mas adecuado es poder reemplazarlo mediante una intervencion con implantes. Trabajamos con productos nacionales e importados. Te brindaremos el mas adecuado tratamiento mediante estudios previos para analizar tu caso en particular.",
-    img: "https://i.imgur.com/dAWtPVd.jpeg",
-  },
+
   {
     id: 5,
     title: "Exodoncia",
     p: "Cuando no ha sido posible la recuperacion de la pieza dental mediante tratamientos alternativos, se debe extraer la misma para aliviar la molestia y el dolor. Es necesario para ello contar con estudios previos y realizar una extraccion causando el menor daño posible para una pronta recuperacion.",
-    img: "https://i.imgur.com/esP7VEI.jpeg",
+    img: "/img/exodoncia.jpg",
+  }, {
+    id: 6,
+    title: "Coronas y puentes",
+    p: "Las coronas y puentes dentales son prótesis dentales hechas a medida que se utilizan para reemplazar o restaurar dientes dañados o faltantes. Coronas, también conocidas como fundas.",
+    img: "/img/coronas-puentes.jpg",
+  },
+  {
+    id: 7,
+    title: "Alineadores Invisibles",
+    p: "Invisalign® es un sistema de ortodoncia que se utiliza para tratar discretamente los dientes torcidos y apiñados en adultos y adolescentes. Esta versión moderna de la ortodoncia.",
+    img: "/img/alineadores.jpg",
+  },
+  {
+    id: 8,
+    title: "Consulta de limpíeza dental",
+    p: "La atención preventiva es fundamental en la odontología. La Asociación Dental Americana recomienda visitar al dentista regularmente, generalmente unas dos veces al año, para limpiezas completas.",
+    img: "/img/limpieza.jpg",
+  },
+  {
+    id: 9,
+    title: "Blanqueamiento Dental",
+    p: "Los procedimientos de blanqueamiento dental se utilizan para aclarar la apariencia de la sonrisa de un paciente, a veces hasta en 5 a 10 tonos en una sola muestra.",
+    img: "/img/blanqueamiento.webp",
+  },
+    {
+    id: 10,
+    title: "Implantes",
+    p: "La opción más avanzada para reemplazar piezas dentarias. Los implantes son estructuras fijas, funcionales y estéticas que se integran al hueso, devolviendo seguridad y naturalidad a tu sonrisa.",
+    img: "/img/implantes.avif",
+  },
+    {
+    id: 11,
+    title: "Odontopediatria",
+    p: "Atención especializada para la salud bucal de niñas y niños. Nos enfocamos en la prevención, el tratamiento temprano y en crear una experiencia positiva que fomente buenos hábitos desde pequeños.",
+    img: "/img/odontopediatria.jpg",
+  },
+    {
+    id: 12,
+    title: "Protesis removible",
+    p: "Solución práctica y estética para reemplazar dientes perdidos. Las prótesis removibles restauran la función masticatoria y la sonrisa, adaptándose cómodamente a tu boca. Ideales para quienes buscan una opción accesible y no invasiva.",
+    img: "/img/removible.jpg",
   },
 ];
 
@@ -99,19 +129,19 @@ export const reviewList = [
 
 export const sliderBackground = [
   {
-    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h1: "Centro Odontologico integral SELEY 'C.I.O.S'",
     h2: "Cuidamos de tu salud oral",
     p: "Que esperas para agendar un turno",
     img: "https://i.imgur.com/Bz2yYAI.jpeg",
   },
   {
-    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h1: "Centro Odontologico integral SELEY 'C.I.O.S'",
     h2: "Solicita tu turno ahora",
     p: "Amplia agenda disponible para evitar que esperes demasiado..",
     img: "https://i.imgur.com/a6MB8Y4.jpeg",
   },
   {
-    h1: "Centro Odontologico integral SEL 'C.I.O.S'",
+    h1: "Centro Odontologico integral SELEY 'C.I.O.S'",
     h2: "Tu salud Oral es nuestra principal prioridad",
     p: "Logremos juntos descubrir con alegria esa sonrisa que esta escondida",
     img: "https://i.imgur.com/4Ci1B4k.jpeg",

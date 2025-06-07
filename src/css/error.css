@@ -6,11 +6,11 @@
   padding: 40px;
 
 }
-.error-container figcaption,img{
+.error-container >figcaption >img{
     width: 100%;
 } 
 
-.error-container div .return {
+.error-container> div> .return {
     padding: 4px 26px;
     border-radius: 20px;
     border: 2.4px solid var(--violet);
@@ -19,7 +19,7 @@
     transition: .3s;
 }
 
-.error-container div .return:hover {
+.error-container >div >.return:hover {
     background-color: var(--violet);
     color: aliceblue;
 }
