@@ -88,7 +88,12 @@ const ListaTurnosAsignados = () => {
       </div>
 
       {/* Fechas próximas */}
-      <div style={{ marginBottom: "15px" }}>
+      <div style={{
+        marginBottom: "15px",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+        gap: "1rem",
+      }}>
         {getNext7Weekdays().map((fecha, idx) => {
           const fechaStr = formatearFecha(fecha);
           return (
@@ -96,7 +101,6 @@ const ListaTurnosAsignados = () => {
               key={idx}
               onClick={() => setFechaSeleccionada(fechaStr)}
               style={{
-                marginRight: "10px",
                 padding: "5px 10px",
                 backgroundColor: fechaStr === fechaSeleccionada ? "#4caf50" : "#e0e0e0",
                 border: "none",
@@ -115,7 +119,6 @@ const ListaTurnosAsignados = () => {
         <button
           onClick={() => setFechaSeleccionada(null)}
           style={{
-            marginLeft: "10px",
             padding: "5px 10px",
             backgroundColor: "#2196f3",
             color: "#fff",
@@ -138,7 +141,7 @@ const ListaTurnosAsignados = () => {
             {/* <strong>Paciente:</strong> {t.paciente?.nombre} {t.paciente?.apellido}{" "} */}
             {t.paciente?.telefono && (
               <a
-                href={`https://wa.me/${t.paciente.telefono.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
+                href={`https://wa.me/54${t.paciente.telefono.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
                   `Hola ${t.paciente?.nombre} ${t.paciente?.apellido}, este es un recordatorio para mañana de tu turno el día ${t.dia} a las ${t.horario} con el/la odontólogo/a ${t.odontologo?.name}.`
                 )}`}
                 target="_blank"

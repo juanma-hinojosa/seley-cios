@@ -19,6 +19,7 @@ const ListaTurnosAsignados = () => {
       .then(res => {
         if (!res.ok) throw new Error("No autorizado");
         return res.json();
+        // navigate("/admin/login");
       })
       .then(data => {
         // Verifica la estructura de los datos recibidos
@@ -88,7 +89,11 @@ const ListaTurnosAsignados = () => {
       </div>
 
       {/* Fechas próximas */}
-      <div style={{ marginBottom: "15px" }}>
+      <div style={{ marginBottom: "15px",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
+        gap: "1rem",
+       }}>
         {getNext7Weekdays().map((fecha, idx) => {
           const fechaStr = formatearFecha(fecha);
           return (
@@ -96,7 +101,7 @@ const ListaTurnosAsignados = () => {
               key={idx}
               onClick={() => setFechaSeleccionada(fechaStr)}
               style={{
-                marginRight: "10px",
+                // marginRight: "10px",
                 padding: "5px 10px",
                 backgroundColor: fechaStr === fechaSeleccionada ? "#4caf50" : "#e0e0e0",
                 border: "none",
@@ -115,7 +120,7 @@ const ListaTurnosAsignados = () => {
         <button
           onClick={() => setFechaSeleccionada(null)}
           style={{
-            marginLeft: "10px",
+            // marginLeft: "10px",
             padding: "5px 10px",
             backgroundColor: "#2196f3",
             color: "#fff",

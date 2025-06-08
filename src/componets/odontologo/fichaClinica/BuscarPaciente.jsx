@@ -25,19 +25,30 @@ const BuscarPacienteInput = ({ onSelect }) => {
 
   useEffect(() => {
     if (query.length < 2) return setResultados([]);
-    const filtro = pacientes.filter(p =>
-      p.nombre.toLowerCase().includes(query.toLowerCase()) ||
-      p.apellido.toLowerCase().includes(query.toLowerCase()) ||
-      p.dni.includes(query) ||
-      p.numeroPaciente.toLowerCase().includes(query.toLowerCase())
-    );
+    
+    const filtro = pacientes.filter(p => {
+      // Verifica y normaliza cada campo antes de usarlo
+      const nombre = p.nombre ? p.nombre.toLowerCase() : '';
+      const apellido = p.apellido ? p.apellido.toLowerCase() : '';
+      const dni = p.dni ? p.dni.toString() : '';
+      const numeroPaciente = p.numeroPaciente ? p.numeroPaciente.toLowerCase() : '';
+      
+      const queryLower = query.toLowerCase();
+      
+      return (
+        nombre.includes(queryLower) ||
+        apellido.includes(queryLower) ||
+        dni.includes(query) || // No convertimos a lowercase para mantener formato DNI
+        numeroPaciente.includes(queryLower)
+      );
+    });
+    
     setResultados(filtro);
   }, [query, pacientes]);
 
   return (
-   <div>
+    <div>
       <input
-       
         type="text"
         placeholder="Buscar por nombre, apellido, DNI o número"
         value={query}
@@ -45,10 +56,22 @@ const BuscarPacienteInput = ({ onSelect }) => {
         style={{ marginRight: "10px", padding: "5px" }}
       />
       {resultados.length > 0 && (
-        <ul>
+        <ul style={{ listStyle: 'none', padding: 0 }}>
           {resultados.map(p => (
-            <li style={{cursor: "pointer", animation:"ease-in-out"}} className='poppins-regular' key={p._id} onClick={() => onSelect(p)}>
-              {p.numeroPaciente} - {p.nombre} {p.apellido} ({p.dni})
+            <li 
+              style={{
+                cursor: "pointer",
+                padding: "8px",
+                borderBottom: "1px solid #eee",
+                transition: "background-color 0.2s ease-in-out"
+              }} 
+              className='poppins-regular' 
+              key={p._id} 
+              onClick={() => onSelect(p)}
+              onMouseEnter={e => e.currentTarget.style.backgroundColor = "#f5f5f5"}
+              onMouseLeave={e => e.currentTarget.style.backgroundColor = "transparent"}
+            >
+              {p.numeroPaciente || 'Sin número'} - {p.nombre || ''} {p.apellido || ''} {p.dni ? `(${p.dni})` : ''}
             </li>
           ))}
         </ul>

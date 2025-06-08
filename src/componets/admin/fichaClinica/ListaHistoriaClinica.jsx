@@ -46,9 +46,9 @@ const ListaHistoriaClinica = () => {
       }} />
       {registros.map(r => (
         <div key={r._id} style={{ border: '1px solid gray', margin: '10px', padding: '10px' }}>
-          <h4>{r.titulo}</h4>
+           <h4>- {r.titulo}</h4>
           <p><strong>Doctor:</strong> {r.doctor?.name}</p>
-          <p>{r.descripcion}</p>
+          <p><strong>Descripcion:</strong> {r.descripcion}</p>
           <p>
             <strong>Fecha:</strong>{' '}
             {new Date(r.fecha).toLocaleDateString('es-AR', {

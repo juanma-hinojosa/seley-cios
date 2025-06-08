@@ -10,7 +10,7 @@ import "../../css/dashboard/DashboardPage.css"
 import { Icon } from "@iconify/react";
 import logo from "/img/logo-white.png"
 
-const OdontologoPanel = () => {
+const OdontologoPanel = () => { 
   const [view, setView] = useState("turnos");
   const [user, setUser] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
