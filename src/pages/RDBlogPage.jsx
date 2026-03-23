@@ -1,5 +1,5 @@
 // src/pages/BlogDetailPage.jsx
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import LoadingSpinner from "../componets/LoadingSpinner";
 import HeaderTitleComponent from "../componets/HeaderTitleComponent";
@@ -7,22 +7,25 @@ import "../css/RDBlogPage.css"
 import logo from "../images/logo-png.png";
 // import LogoVioleta from "/img/logo-violeta.png";
 
-import LightGallery from 'lightgallery/react';
+// import LightGallery from 'lightgallery/react';
 
 // import styles
-import 'lightgallery/css/lightgallery.css';
-import 'lightgallery/css/lg-zoom.css';
-import 'lightgallery/css/lg-thumbnail.css';
+// import 'lightgallery/css/lightgallery.css';
+// import 'lightgallery/css/lg-zoom.css';
+// import 'lightgallery/css/lg-thumbnail.css';
 
 // import plugins if you need
-import lgThumbnail from 'lightgallery/plugins/thumbnail';
-import lgZoom from 'lightgallery/plugins/zoom';
+// import lgThumbnail from 'lightgallery/plugins/thumbnail';
+// import lgZoom from 'lightgallery/plugins/zoom';
 import { Helmet } from "react-helmet-async";
 
 
 function BlogDetailPage() {
   const { id } = useParams(); // obtenemos solo el ID
   const [blog, setBlog] = useState(null);
+
+  const location = useLocation();
+  const canonicalUrl = `https://cios-consultorio.com${location.pathname}`;
 
   useEffect(() => {
     fetch(`https://backend-cios.onrender.com/api/blogs/publico/${id}`)
@@ -41,6 +44,8 @@ function BlogDetailPage() {
       <Helmet>
         <title>{blog.tema} | Odontología C.I.O.S Dental R&R</title>
         <meta name="description" content={blog.introduccion} />
+        <link rel="canonical" href={canonicalUrl} />
+
       </Helmet>
 
       <section

@@ -39,6 +39,7 @@ function HomePage() {
       <Helmet>
         <title>Inicio | Odontología C.I.O.S Dental R&R</title>
         <meta name="description" content="Odontologia C.I.O.S Dental Parque Chacabuco. Consultorio odontológico en CABA. Atención personalizada en ortodoncia y estética dental." />
+        <link rel="canonical" href="https://cios-consultorio.com" />
       </Helmet>
 
 

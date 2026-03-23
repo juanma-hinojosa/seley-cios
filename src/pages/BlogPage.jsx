@@ -25,44 +25,7 @@ function BlogPage() {
   const [flyer, setFlyer] = useState(null);
   const [isLoading, setIsLoading] = useState(true); // Estado de carga
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       // Cargar blogs
-  //       const blogsRes = await fetch("https://backend-cios.onrender.com/api/blogs/publicos");
 
-
-  //       const blogsData = await blogsRes.json();
-  //       // console.log(blogsData);
-  //       console.log("Antes de ordenar:", blogsData.map(b => b.createdAt));
-
-  //       const sorted = [...blogsData].sort(
-  //         (a, b) => new Date(b.createdEn) - new Date(a.createdEn)
-  //       );
-  //       console.log("Después de ordenar:", sorted.map(b => b.creadoEn));
-
-  //       // console.log("Después de ordenar:", sorted.map(b => b.createdAt));
-
-  //       setBlogs(sorted);
-
-  //       // Cargar flyers
-  //       const flyerRes = await axios.get("https://backend-cios.onrender.com/api/flyers");
-  //       const now = new Date();
-  //       const activeFlyers = flyerRes.data.filter(f =>
-  //         new Date(f.expirationDate) > now
-  //       );
-  //       if (activeFlyers.length > 0) {
-  //         setFlyer(activeFlyers[0]);
-  //       }
-  //     } catch (err) {
-  //       console.error("Error cargando datos:", err);
-  //     } finally {
-  //       setIsLoading(false); // Ocultar spinner
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -99,6 +62,8 @@ function BlogPage() {
       <Helmet>
         <title>Blog | Odontología C.I.O.S Dental R&R</title>
         <meta name="description" content="Odontologia C.I.O.S Dental Parque Chacabuco. Dentista Parque Chacabuco. Noticias, Blogs, Novedades y Avances de casos clinicos." />
+        <link rel="canonical" href="https://cios-consultorio.com/blog" />
+
       </Helmet>
 
       {flyer ? <HeroFlyer flyer={flyer} /> : <HeroSection video={video} />}

@@ -11,6 +11,8 @@ import "../../css/dashboard/DashboardPage.css"
 import { Icon } from "@iconify/react";
 import logo from "/img/logo-white.png"
 import FlyerManager from "../admin/flyer/FlyerManager";
+import OdontogramaManager from "../admin/odontograma/OdontogramaManager";
+import Odontograma from "../admin/odontograma/Odontograma";
 
 const AdminPanel = () => {
   const [view, setView] = useState("turnos");
@@ -22,7 +24,7 @@ const AdminPanel = () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     setUser(storedUser);
   }, []);
- 
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/admin/login");
@@ -58,8 +60,13 @@ const AdminPanel = () => {
               <Icon icon="mdi:account-heart" /> Pacientes
             </li>
             <li onClick={() => { setView("historiaClinica"); setIsMenuOpen(false); }}>
-              <Icon icon="mdi:book-open-page-variant" /> Historia Clínica
+              <Icon icon="mdi:book-open-page-variant" /> H. Clínica y Odontograma
             </li>
+
+            {/* <li onClick={() => { setView("odontograma"); setIsMenuOpen(false); }}>
+              <Icon icon="la:teeth" /> Odontograma
+            </li> */}
+
             <li onClick={() => { setView("turnos"); setIsMenuOpen(false); }}>
               <Icon icon="mdi:calendar-clock" /> Turnos
             </li>
@@ -105,12 +112,15 @@ const AdminPanel = () => {
           {view === "empleados" && <EmpleadoManager />}
           {view === "pacientes" && <PacienteManager />}
           {view === "historiaClinica" && <HistoriaClinicaManager />}
+
           {view === "turnos" && <TurnosManager />}
           {view === "pagos" && <PagosManager />}
 
           {view === "tratamientos" && <TratamientosManager />}
           {view === "blog" && <BlogManager userRole={user?.role} />}
           {view === "flyers" && <FlyerManager />}
+
+          {/* { view === 'odontograma' && <Odontograma /> }           */}
         </section>
       </main>
     </div>

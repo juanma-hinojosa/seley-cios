@@ -56,15 +56,15 @@ const CrearPaciente = ({ onVolver }) => {
           <label htmlFor="" className='ui-label'>Apellido</label>
           <input className="ui-input" name="apellido" value={form.apellido} onChange={handleChange} placeholder="Apellido" required />
           <label htmlFor="" className='ui-label'>Numero de Documento</label>
-          <input className="ui-input" name="dni" value={form.dni} onChange={handleChange} placeholder="DNI" required />
+          <input className="ui-input" name="dni" value={form.dni} type='number' onChange={handleChange} placeholder="DNI" required />
           <label htmlFor="" className='ui-label'>Fecha de nacimiento</label>
           <input className="ui-input" name="fechaNacimiento" type="date" value={form.fechaNacimiento} onChange={handleChange} required />
           <label htmlFor="" className='ui-label'>Domicilio</label>
           <input className="ui-input" name="direccion" value={form.direccion} onChange={handleChange} placeholder="Dirección" required />
           <label htmlFor="" className='ui-label'>Email de contacto</label>
-          <input className="ui-input" name="email" value={form.email} onChange={handleChange} placeholder="Email opcional" />
+          <input className="ui-input" name="email" type='email' value={form.email} onChange={handleChange} placeholder="Email opcional" />
           <label htmlFor="" className='ui-label'>Celular de contacto</label>
-          <input className="ui-input" name="telefono" value={form.telefono} onChange={handleChange} placeholder="Teléfono" required />
+          <input className="ui-input" name="telefono" type='number'  value={form.telefono} onChange={handleChange} placeholder="Teléfono" required />
           <label htmlFor="" className='ui-label'>Observaciones</label>
           <textarea className="ui-textarea" name="alergias" value={form.alergias} onChange={handleChange} placeholder="Alergias (si hay)" />
           <button  style={{padding:"10px"}} type="submit">Guardar</button>

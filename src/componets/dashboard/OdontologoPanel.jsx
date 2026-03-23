@@ -56,7 +56,7 @@ const OdontologoPanel = () => {
               <Icon icon="mdi:account-heart" /> Pacientes
             </li>
             <li onClick={() => { setView("historiaClinica"); setIsMenuOpen(false); }}>
-              <Icon icon="mdi:book-open-page-variant" /> Historia Clínica
+              <Icon icon="mdi:book-open-page-variant" /> H Clinica y Odontograma
             </li>
             <li onClick={() => { setView("turnos"); setIsMenuOpen(false); }}>
               <Icon icon="mdi:calendar-clock" /> Turnos

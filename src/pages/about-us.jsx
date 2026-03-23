@@ -16,6 +16,8 @@ function AboutPage() {
       <Helmet>
         <title>Nosotros | Odontología C.I.O.S Dental R&R</title>
         <meta name="description" content="Odontologia C.I.O.S Dental Parque Chacabuco. Dentista Parque Chacabuco. Nosotros y nuestra historia." />
+              <link rel="canonical" href="https://cios-consultorio.com/about" />
+
       </Helmet>
 
       <HeroComponent
