@@ -20,3 +20,12 @@ export const INITIAL_FACES = {
   left: "",
   center: ""
 };
+
+export const TOOTH_MARKS = [
+  { value: "", label: "-" },
+  { value: "TC", label: "TC" },
+  { value: "O", label: "O" }, // Corona / círculo
+  { value: "P", label: "P" },
+  { value: "I", label: "I" },
+  { value: "=", label: "=" }
+];

@@ -11,13 +11,13 @@ export default function Odontograma() {
       categoria: "Principales",
       items: [
         {
-          nombre: "Celeste",
+          nombre: "Azul",
           descripcion: "Tratamientos realizados y en buen estado",
           color: "#1D3557"
         },
         {
           nombre: "Rojo",
-          descripcion: "Patologías, lesiones o tratamientos pendientes",
+          descripcion: "Caries, lesiones o tratamientos pendientes",
           color: "#E63946"
         }
       ]
@@ -49,6 +49,28 @@ export default function Odontograma() {
     }
   ];
 
+  const MARK_INFO = [
+    {
+      inicial: "TC",
+      descripcion: "Tratamiento de conducto"
+    },
+    {
+      inicial: "O",
+      descripcion: "Corona"
+    },
+    {
+      inicial: "P",
+      descripcion: "Pivot / Perno"
+    },
+    {
+      inicial: "I",
+      descripcion: "Incrustación"
+    },
+    {
+      inicial: "=",
+      descripcion: "Extracción"
+    }
+  ];
 
   return (
     <div className="poppins-regular" >
@@ -64,7 +86,7 @@ export default function Odontograma() {
 
       {COLOR_INFO.map((grupo) => (
         <div key={grupo.categoria}>
-          <h4 style={{margin:'20px 0 10px 0'}} >{grupo.categoria}</h4>
+          <h4 style={{ margin: '20px 0 10px 0' }} >{grupo.categoria}</h4>
 
           {grupo.items.map((item) => (
             <div key={item.nombre} style={{ display: "flex", alignItems: "center", gap: 8 }}>
@@ -81,6 +103,56 @@ export default function Odontograma() {
           ))}
         </div>
       ))}
+
+      <div style={{ marginTop: 30 }}>
+        <h4 style={{ margin: "20px 0 10px 0" }}>
+          Referencias de pieza completa
+        </h4>
+
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: 12
+          }}
+        >
+          {MARK_INFO.map((item) => (
+            <div
+              key={item.inicial}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "8px 12px",
+                border: "1px solid #ddd",
+                borderRadius: 8,
+                background: "#fafafa"
+              }}
+            >
+              <div
+                style={{
+                  width: 34,
+                  height: 34,
+                  border: "1px solid #000",
+                  borderRadius: item.inicial === "O" ? "50%" : 4,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontWeight: "bold",
+                  fontSize: item.inicial === "TC" ? 11 : 16,
+                  background: "#fff"
+                }}
+              >
+                {item.inicial !== "O" ? item.inicial : ""}
+              </div>
+
+              <div>
+                <strong>{item.inicial}</strong>: {item.descripcion}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

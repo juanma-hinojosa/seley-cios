@@ -8,7 +8,7 @@ export const useOdontograma = (pacienteId) => {
   const [editable, setEditable] = useState(false);
   const [loading, setLoading] = useState(false);
 
-   // 🔄 cargar odontograma
+  // 🔄 cargar odontograma
   useEffect(() => {
     if (!pacienteId) return;
 
@@ -35,27 +35,58 @@ export const useOdontograma = (pacienteId) => {
   };
 
   // 🎯 actualizar SOLO local
-  const updateLocal = (numero, cara, estado) => {
-    if (!editable) return;
+  // const updateLocal = (numero, cara, estado) => {
+  //   if (!editable) return;
 
-    setOdontograma(prev => ({
-      ...prev,
-      dientes: prev.dientes.map(d =>
-        d.numero === numero
-          ? {
-              ...d,
-              caras: {
-                ...d.caras,
-                [cara]: {
-                  ...d.caras[cara],
-                  estado
-                }
-              }
-            }
-          : d
-      )
-    }));
-  };
+  //   setOdontograma(prev => ({
+  //     ...prev,
+  //     dientes: prev.dientes.map(d =>
+  //       d.numero === numero
+  //         ? {
+  //             ...d,
+  //             caras: {
+  //               ...d.caras,
+  //               [cara]: {
+  //                 ...d.caras[cara],
+  //                 estado
+  //               }
+  //             }
+  //           }
+  //         : d
+  //     )
+  //   }));
+  // };
+
+  const updateLocal = (numero, campo, valor) => {
+  if (!editable) return;
+
+  setOdontograma((prev) => ({
+    ...prev,
+    dientes: prev.dientes.map((d) => {
+      if (d.numero !== numero) return d;
+
+      // Estado general de toda la pieza
+      if (campo === "estadoGeneral") {
+        return {
+          ...d,
+          estadoGeneral: valor
+        };
+      }
+
+      // Estado de una cara
+      return {
+        ...d,
+        caras: {
+          ...d.caras,
+          [campo]: {
+            ...d.caras[campo],
+            estado: valor
+          }
+        }
+      };
+    })
+  }));
+};
 
   // 💾 guardar TODO
   const guardar = async () => {

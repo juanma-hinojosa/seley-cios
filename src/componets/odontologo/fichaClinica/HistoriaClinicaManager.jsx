@@ -4,6 +4,7 @@ import ListaHistoriaClinica from './ListaHistoriaClinica';
 import EditarHistoriaClinica from './EditarHistoriaClinica';
 import EliminarHistoriaClinica from './EliminarHistoriaClinica';
 import Odontograma from '../../admin/odontograma/Odontograma';
+import PDFManager from '../../admin/pdfgenerador/pdfManager';
 
 const HistoriaClinicaManager = () => {
   const [vista, setVista] = useState("listar");
@@ -21,6 +22,8 @@ const HistoriaClinicaManager = () => {
         gap: "1rem",
         // padding: "2rem"
       }}>
+        <button style={{ padding: "5px 10px" }} className='poppins-light' onClick={() => handleVista('imprimir')}>Imprimir Historia Clinica</button>
+
         <button style={{ padding: "5px 10px" }} className='poppins-light' onClick={() => handleVista('crear')}>Crear nueva entrada</button>
         <button style={{ padding: "5px 10px" }} className='poppins-light' onClick={() => handleVista('listar')}>Ver historial</button>
         <button style={{ padding: "5px 10px" }} className='poppins-light' onClick={() => handleVista('odontograma')}>Odontograma</button>
@@ -30,9 +33,12 @@ const HistoriaClinicaManager = () => {
       <hr />
 
       <div style={{ marginTop: '1rem' }}>
+        {vista === 'imprimir' && <PDFManager />}
+
         {vista === 'crear' && <CrearHistoriaClinica />}
         {vista === 'listar' && <ListaHistoriaClinica />}
         {vista === 'odontograma' && <Odontograma />}
+
         {/* {vista === 'editar' && <EditarHistoriaClinica />} */}
         {/* {vista === 'eliminar' && <EliminarHistoriaClinica />} */}
       </div>
