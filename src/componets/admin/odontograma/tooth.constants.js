@@ -5,13 +5,19 @@ export const STATES = ["", "caries", "restaurado",
 export const COLORS = {
   "": "#f5f5f5",
   caries: "#E63946",
-  restaurado: "#00aae4",
-  // ausente: "#9e9e9e",
+  restaurado: "#1D3557",
   temporales: '#008000',
   sellantes: '#FFFF00',
   ausentes: '#000',
   materialesEspecificos: '#FFA500'
 };
+
+// 👇 NUEVOS COLORES PARA ESTADO GENERAL
+export const GENERAL_STATE_COLORS = {
+  realizado: "#00aae4",
+  pendiente: "#E63946"
+};
+
 
 export const INITIAL_FACES = {
   top: "",

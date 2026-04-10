@@ -35,7 +35,41 @@ export const useOdontograma = (pacienteId) => {
   };
 
   // 🎯 actualizar SOLO local
-  const updateLocal = (numero, campo, valor) => {
+  // const updateLocal = (numero, campo, valor) => {
+  //   if (!editable) return;
+
+  //   setOdontograma((prev) => ({
+  //     ...prev,
+  //     dientes: prev.dientes.map((d) => {
+  //       if (d.numero !== numero) return d;
+
+  //       // Estado general de toda la pieza
+  //       if (campo === "estadoGeneral") {
+  //         return {
+  //           ...d,
+  //           estadoGeneral: valor
+  //         };
+  //       }
+
+  //       // Estado de una cara
+  //       return {
+  //         ...d,
+  //         caras: {
+  //           ...d.caras,
+  //           [campo]: {
+  //             ...d.caras[campo],
+  //             estado: valor
+  //           }
+  //         }
+  //       };
+  //     })
+  //   }));
+  // };
+
+  // useOdontograma.js
+  // reemplazá solamente la función updateLocal por esta
+
+  const updateLocal = (numero, campo, valor, extra = {}) => {
     if (!editable) return;
 
     setOdontograma((prev) => ({
@@ -47,7 +81,8 @@ export const useOdontograma = (pacienteId) => {
         if (campo === "estadoGeneral") {
           return {
             ...d,
-            estadoGeneral: valor
+            estadoGeneral: valor,
+            estadoGeneralColor: extra.color || ""
           };
         }
 
@@ -65,6 +100,8 @@ export const useOdontograma = (pacienteId) => {
       })
     }));
   };
+
+
 
   // 💾 guardar TODO
   const guardar = async () => {
