@@ -23,12 +23,6 @@ const Tooth = ({ number, data, onChange, editable }) => {
 
   if (!data) return null;
 
-  // const handle = (face) => {
-  //   if (!editable) return;
-
-  //   const next = getNext(data.caras[face].estado);
-  //   onChange(String(number), face, next);
-  // };
 
   const handleFace = (face, e) => {
     if (!editable) return;
@@ -48,75 +42,13 @@ const Tooth = ({ number, data, onChange, editable }) => {
       prev?.type === "mark"
         ? null
         : {
-            type: "mark"
-          }
+          type: "mark"
+        }
     );
   };
 
-  // return (
-  //   <div style={{ margin: 6 }}>
-  //     <svg width="40" height="40">
-  //       <ToothMask id={`m-${number}`} />
 
-  //       <g mask={`url(#m-${number})`}>
-  //         {Object.entries(FACE_CONFIG).map(([f, pts]) => (
-  //           <ToothFace
-  //             key={f}
-  //             points={pts}
-  //             color={COLORS[data.caras[f].estado]}
-  //             // onClick={() => handle(f)}
-  //             onClick={(e) => handle(f, e)}
-  //           />
-  //         ))}
-  //         <ToothLines />
-  //       </g>
-
-  //       <ToothCenter
-  //         color={COLORS[data.caras.center.estado]}
-  //         // onClick={() => handle("center")}
-  //         onClick={(e) => handle("center", e)}
-  //       />
-  //     </svg>
-  //     {selector && (
-  //       <div
-  //         style={{
-  //           position: "fixed",
-  //           top: selector.y,
-  //           left: selector.x,
-  //           background: "#fff",
-  //           border: "1px solid #ccc",
-  //           padding: 6,
-  //           display: "flex",
-  //           gap: 6,
-  //           zIndex: 999
-  //         }}
-  //       >
-  //         {STATES.map((state) => (
-  //           <div
-  //             key={state}
-  //             onClick={() => {
-  //               onChange(String(number), selector.face, state);
-  //               setSelector(null);
-  //             }}
-  //             style={{
-  //               width: 20,
-  //               height: 20,
-  //               backgroundColor: COLORS[state],
-  //               border: "1px solid black",
-  //               cursor: "pointer"
-  //             }}
-  //           />
-  //         ))}
-  //       </div>
-  //     )}
-  //     <div>{number}</div>
-
-
-  //   </div>
-  // );
-
-
-return (
+  return (
     <div
       style={{
         margin: 6,

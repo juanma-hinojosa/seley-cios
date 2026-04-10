@@ -104,9 +104,9 @@ const COLOR_INFO = [
     categoria: "Principales",
     items: [
       {
-        nombre: "Azul",
+        nombre: "Celeste",
         descripcion: "Tratamientos realizados y en buen estado",
-        color: "#1D3557"
+        color: "#00aae4"
       },
       {
         nombre: "Rojo",
@@ -162,6 +162,10 @@ const MARK_INFO = [
   {
     inicial: "=",
     descripcion: "Extracción"
+  },
+  {
+    inicial: "X",
+    descripcion: "Pieza Ausente"
   }
 ];
 

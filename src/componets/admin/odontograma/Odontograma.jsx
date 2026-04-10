@@ -11,9 +11,9 @@ export default function Odontograma() {
       categoria: "Principales",
       items: [
         {
-          nombre: "Azul",
+          nombre: "Celeste",
           descripcion: "Tratamientos realizados y en buen estado",
-          color: "#1D3557"
+          color: "#00aae4"
         },
         {
           nombre: "Rojo",
@@ -69,6 +69,10 @@ export default function Odontograma() {
     {
       inicial: "=",
       descripcion: "Extracción"
+    },
+    {
+      inicial: "X",
+      descripcion: "Pieza Ausente"
     }
   ];
 

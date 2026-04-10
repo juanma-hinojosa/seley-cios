@@ -1,16 +1,16 @@
-export const STATES = ["", "caries", "restaurado", 
+export const STATES = ["", "caries", "restaurado",
   // "ausente",
-  'temporales','sellantes', 'ausentes', 'materialesEspecificos'];
+  'temporales', 'sellantes', 'ausentes', 'materialesEspecificos'];
 
 export const COLORS = {
   "": "#f5f5f5",
   caries: "#E63946",
-  restaurado: "#1D3557",
+  restaurado: "#00aae4",
   // ausente: "#9e9e9e",
   temporales: '#008000',
-  sellantes:'#FFFF00',
-  ausentes:'#000',
-  materialesEspecificos:'#FFA500'
+  sellantes: '#FFFF00',
+  ausentes: '#000',
+  materialesEspecificos: '#FFA500'
 };
 
 export const INITIAL_FACES = {
@@ -27,5 +27,6 @@ export const TOOTH_MARKS = [
   { value: "O", label: "O" }, // Corona / círculo
   { value: "P", label: "P" },
   { value: "I", label: "I" },
-  { value: "=", label: "=" }
+  { value: "=", label: "=" },
+  { value: 'X', label: 'X' }
 ];
